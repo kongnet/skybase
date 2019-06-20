@@ -1,0 +1,17 @@
+{
+  "name": "7-token",
+  "version": "1.0.0",
+  "description": "含所有模块的应用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "j2sql": "^1.9.21",
+    "amqplib": "^0.5.3",
+    "ioredis": "^4.9.5",
+    "meeko": "^1.7.50"
+  }
+}

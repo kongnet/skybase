@@ -1,0 +1,15 @@
+{
+  "name": "5-mock-api",
+  "version": "1.0.0",
+  "description": "按照api json生成api文档目录结构和路由结构",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "meeko": "^1.7.50",
+    "mockjs": "^1.0.1-beta3"
+  }
+}

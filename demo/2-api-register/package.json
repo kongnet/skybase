@@ -1,0 +1,11 @@
+{
+  "name": "2-api-register",
+  "version": "1.0.0",
+  "description": "含完整文件结构",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

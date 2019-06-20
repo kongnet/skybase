@@ -1,0 +1,11 @@
+{
+  "name": "1-simple",
+  "version": "1.0.0",
+  "description": "含最少组件的应用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
