@@ -19,6 +19,7 @@ module.exports = {
     },
     'token': false,
     'needSign': false,
+    feqLimit: 1, // 每秒允许访问的次数
     'err_code': {},
     'test': {},
     'front': true
