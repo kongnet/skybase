@@ -6,6 +6,10 @@
   "directories": {
     "test": "tests"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kongnet/skybase.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch": "git add . && git commit -m:pencil2: && npm version patch && npm publish .",
