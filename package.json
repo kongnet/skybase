@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "git add . && git commit -m:pencil2: && npm version patch && npm publish .",
     "demo1": "node demo/1-simple/index.js",
     "demo2": "node demo/2-api-register/index.js",
     "demo3": "node demo/3-full-module/index.js",
