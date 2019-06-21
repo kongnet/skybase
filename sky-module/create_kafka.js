@@ -2,7 +2,7 @@ const $ = require('meeko')
 const kafka = require('kafka-node')
 const HighLevelProducer = kafka.HighLevelProducer
 const Client = kafka.KafkaClient
-
+$.option.logTime = false
 module.exports = async (kafkaConfig) => {
   try {
     let client = new Client({ kafkaHost: kafkaConfig.host })

@@ -1,5 +1,6 @@
 const $ = require('meeko')
 const amqp = require('amqplib')
+$.option.logTime = false
 module.exports = async (rmq) => {
   try {
     const MQ = await amqp.connect({

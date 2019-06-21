@@ -1,6 +1,6 @@
 /* global $ */
 const Redis = require('ioredis')
-
+$.option.logTime = false
 const connect = function (rd) {
   let hadConnected = false
   let connected
