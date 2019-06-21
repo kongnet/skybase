@@ -1,6 +1,6 @@
 {
   "name": "skybase",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "sky框架",
   "main": "index.js",
   "directories": {
