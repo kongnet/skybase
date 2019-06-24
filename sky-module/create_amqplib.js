@@ -1,5 +1,6 @@
 const $ = require('meeko')
 const amqp = require('amqplib')
+$.option.logTime = false
 module.exports = async (rmq) => {
   try {
     const MQ = await amqp.connect({
@@ -23,7 +24,6 @@ module.exports = async (rmq) => {
     return MQ
   } catch (e) {
     $.err($.c.r('✘'), `-x- rabbitMQ [${$.c.yellow}${rmq.host} : ${rmq.port}${$.c.none}] disconnect...`)
-    console.error(e.stack)
   }
   return false
 }

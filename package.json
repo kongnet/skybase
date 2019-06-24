@@ -1,6 +1,6 @@
 {
   "name": "skybase",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "description": "sky框架",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/kongnet/skybase.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nyc --reporter=html mocha ./tests/*.js",
     "patch": "git add . && git commit -m:pencil2: && npm version patch && npm publish .",
     "demo1": "node demo/1-simple/index.js",
     "demo2": "node demo/2-api-register/index.js",
@@ -27,6 +27,8 @@
   "dependencies": {
     "bluebird": "^3.5.4",
     "figlet": "^1.2.1",
+    "ioredis": "^4.10.0",
+    "j2sql": "^1.9.22",
     "kafka-node": "^4.1.3",
     "koa": "^2.7.0",
     "koa-better-body": "^3.0.4",
@@ -34,7 +36,6 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
-    "ioredis": "^4.10.0",
     "meeko": "*",
     "mockjs": "^1.0.1-beta3",
     "request": "^2.88.0",
@@ -42,7 +43,11 @@
   },
   "devDependencies": {
     "amqplib": "^0.5.3",
+    "co-mocha": "^1.2.2",
+    "istanbul": "^0.4.5",
     "j2sql": "^1.9.21",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
     "standard": "^12.0.1"
   }
 }
