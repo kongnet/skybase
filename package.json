@@ -13,6 +13,7 @@
   "scripts": {
     "test": "nyc --reporter=html mocha ./tests/*.js",
     "patch": "git add . && git commit -m:pencil2: && npm version patch && npm publish .",
+    "cz": "git add . && git status && git cz && npm version patch && npm publish .",
     "demo1": "node demo/1-simple/index.js",
     "demo2": "node demo/2-api-register/index.js",
     "demo3": "node demo/3-full-module/index.js",
@@ -44,10 +45,16 @@
   "devDependencies": {
     "amqplib": "^0.5.3",
     "co-mocha": "^1.2.2",
+    "cz-jt": "^0.1.7",
     "istanbul": "^0.4.5",
     "j2sql": "^1.9.21",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "standard": "^12.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-jt"
+    }
   }
 }
