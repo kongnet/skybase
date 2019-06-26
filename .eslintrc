@@ -1,0 +1,40 @@
+{
+  "plugins": [],
+  "env": {
+    "browser": false,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "globals": {
+    "angular": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-unused-vars": 1,
+    "camelcase": 0,
+    "curly": 2,
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "quotes": [
+      1,
+      "single"
+    ],
+    "semi": [
+      0,
+      "always"
+    ],
+    "space-infix-ops": 1,
+    "no-console": 0,
+    "complexity": [
+      1,
+      10
+    ]
+  },
+  "extends": "eslint:recommended"
+}
