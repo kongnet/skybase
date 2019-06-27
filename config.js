@@ -43,6 +43,14 @@ module.exports = {
   routerDir: './router',
 
   /**
+   * service所在目录
+   *
+   * 框架会自动加载service，并为每个service指定一个固定的错误码，当该service发生错误时，会打印该错误码
+   * 如果不要该功能，把此配置设为空即可
+   * */
+  serviceDir: '',
+
+  /**
    * 是否打印日志
    * */
   logger: true,
