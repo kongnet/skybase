@@ -13,7 +13,7 @@ const connect = function (rd) {
   // ioredis 自动重连出错时：
   redis.reconnectOnError = function (err) {
     redis.connStatus = { stat: 0 }
-    $.err($.c.r('✘'), `-x- Redis [${$.c.yellow}${rd.host} : ${rd.port}${$.c.none}] disconnect...`)
+    $.err($.c.r('✘'), `-x- Redis [${$.c.yellow(`${rd.host} : ${rd.port}`)}] disconnect...`)
     $.err('redis连接失败原因：', err.code, err.message)
     return false // 返回true或1才会重新启动
   }
@@ -21,14 +21,14 @@ const connect = function (rd) {
     redis.connStatus = { stat: 1 }
     redis.dbsize().then(function (_r) {
       _r = _r || 0
-      $.log($.c.g('✔'), `Redis [${$.c.yellow}${rd.host} : ${rd.port}${$.c.none}] db ${$.c.yellow}${rd.db}${$.c.none} [${$.c.yellow}${_r}${$.c.none}] Objects`)
+      $.log($.c.g('✔'), `Redis [${$.c.yellow(`${rd.host} : ${rd.port}`)}] db ${$.c.yellow(rd.db)} [${$.c.yellow(_r)}] Objects`)
 
       hadConnected = true
       connected && connected()
     })
   })
   redis.on('error', function (e) {
-    $.err($.c.r('✘'), `-x- Redis [${$.c.yellow}${rd.host} : ${rd.port}${$.c.none}] ${e.toString()}`)
+    $.err($.c.r('✘'), `-x- Redis [${$.c.yellow(`${rd.host} : ${rd.port}`)}] ${e.toString()}`)
   })
 
   redis.waitForConnected = () => new class {
