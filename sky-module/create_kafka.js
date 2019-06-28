@@ -9,15 +9,15 @@ module.exports = async (kafkaConfig) => {
     const producer = new HighLevelProducer(client)
 
     producer.on('ready', function () {
-      $.log($.c.g('✔'), `Kafka [${$.c.yellow}${kafkaConfig.host} ${$.c.none}]`)
+      $.log($.c.g('✔'), `Kafka [${$.c.y(kafkaConfig.host)}]`)
     })
 
     producer.on('error', function (e) {
-      $.err($.c.r('✘'), `-x- Kafka [${$.c.yellow}${kafkaConfig.host} ${$.c.none}] disconnect...`)
+      $.err($.c.r('✘'), `-x- Kafka [${$.c.y(kafkaConfig.host)}] disconnect...`)
     })
     return producer
   } catch (e) {
-    $.err($.c.r('✘'), `-x- Kafka [${$.c.yellow}${kafkaConfig.host} ${$.c.none}] disconnect...`)
+    $.err($.c.r('✘'), `-x- Kafka [${$.c.y(kafkaConfig.host)}] disconnect...`)
     console.error(e.stack)
   }
   return null
