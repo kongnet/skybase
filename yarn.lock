@@ -2019,10 +2019,10 @@ istanbul@^0.4.5:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
-j2sql@^1.9.24:
-  version "1.9.24"
-  resolved "https://registry.yarnpkg.com/j2sql/-/j2sql-1.9.24.tgz#2f4dd005d20a48dcb5e1c3a8a71e04659ab1d84c"
-  integrity sha512-FVaztdMkg+tro4AZXt5HrJlh6u7OooWXPzfE8JSgV45y9E0tkZNuTUeXbCGjzJO5SIuuQUBHkyYLYyY8bC7pzA==
+j2sql@^1.9.25:
+  version "1.9.25"
+  resolved "https://registry.yarnpkg.com/j2sql/-/j2sql-1.9.25.tgz#b120d53baff7f734877e2f2c080be6b61134fd98"
+  integrity sha512-NAGFMqysRZhNTK6ksEzbvX915hrKEZgvYfN2nC1oo3jR9Vuv0O0ZPWsiUdUD2v9yzBCUMBJqC1WTc2QXaYRd0Q==
   dependencies:
     bluebird "*"
     co "*"

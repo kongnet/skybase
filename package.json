@@ -29,7 +29,7 @@
     "bluebird": "^3.5.4",
     "figlet": "^1.2.1",
     "ioredis": "^4.10.0",
-    "j2sql": "^1.9.24",
+    "j2sql": "^1.9.25",
     "kafka-node": "^4.1.3",
     "koa": "^2.7.0",
     "koa-better-body": "^3.0.4",
