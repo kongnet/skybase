@@ -2019,10 +2019,10 @@ istanbul@^0.4.5:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
-j2sql@^1.9.23:
-  version "1.9.23"
-  resolved "https://registry.yarnpkg.com/j2sql/-/j2sql-1.9.23.tgz#3d297ff9a5ba6826180fcd47d5889047452b4a49"
-  integrity sha512-VDlupIb/DP+JyJoLKaYBV1B+4wXl7/jvZeonKcI8j+lX/umDx8WBWEMi6LPdsFnABQ90Xb/g1Rck+cdisTC47g==
+j2sql@^1.9.24:
+  version "1.9.24"
+  resolved "https://registry.yarnpkg.com/j2sql/-/j2sql-1.9.24.tgz#2f4dd005d20a48dcb5e1c3a8a71e04659ab1d84c"
+  integrity sha512-FVaztdMkg+tro4AZXt5HrJlh6u7OooWXPzfE8JSgV45y9E0tkZNuTUeXbCGjzJO5SIuuQUBHkyYLYyY8bC7pzA==
   dependencies:
     bluebird "*"
     co "*"
@@ -2356,10 +2356,10 @@ meeko@*:
   resolved "https://registry.yarnpkg.com/meeko/-/meeko-1.7.74.tgz#e0b2e89e89ae55c65ef2ac340c76c910c6fa74a7"
   integrity sha512-QYGmb8Hg2XRcsZqXupUqWfNC09HkZjmcoLFCxh6AREhhihSM/9hTRFOyd2Iygy2ty6pYJh2Gy2/+hfBt9ulsKQ==
 
-meeko@^1.7.79:
-  version "1.7.79"
-  resolved "https://registry.yarnpkg.com/meeko/-/meeko-1.7.79.tgz#d1e13856f8abd05aafc454ab745b6322578725b6"
-  integrity sha512-qz0g2eahWRQ+uSHFV40VRvB7yPMKN93aNVHA2K3v8w1pbYEE/K+AvdHXG8Wg+f/k8jpHFVzVXqpu4AU/apMiag==
+meeko@^1.7.80:
+  version "1.7.80"
+  resolved "https://registry.yarnpkg.com/meeko/-/meeko-1.7.80.tgz#a198860696fae366a565a4908f25ecf3001c77e5"
+  integrity sha512-Lu9kOSg7rYW1JuclfJ5+jK6D5KrbUDRYD3DQLElA2KMgjW/ie9iCJ7lzf+cEC0w0VkZLvG9qCT3S5Z+M8QO+OQ==
 
 mem@^4.0.0:
   version "4.3.0"
