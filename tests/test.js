@@ -20,7 +20,7 @@ describe('覆盖率测试', async () => {
       await redis.waitForConnected()
       global.redis = redis
 
-      createIoredis({ host: 'localhost', port: 6380, db: 1 })
+      createIoredis({ host: 'localhost', port: 6379, db: 1 })
 
       const db = require('j2sql')(Config.mysql)
       await waitNotEmpty(db, '_mysql')
@@ -159,7 +159,7 @@ describe('覆盖率测试', async () => {
     })
   })
 
-  await $.wait(1000)
+  await $.wait(10000)
   process.exit(0) // 测试结束退出
 })
 
