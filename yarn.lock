@@ -2356,10 +2356,10 @@ meeko@*:
   resolved "https://registry.yarnpkg.com/meeko/-/meeko-1.7.74.tgz#e0b2e89e89ae55c65ef2ac340c76c910c6fa74a7"
   integrity sha512-QYGmb8Hg2XRcsZqXupUqWfNC09HkZjmcoLFCxh6AREhhihSM/9hTRFOyd2Iygy2ty6pYJh2Gy2/+hfBt9ulsKQ==
 
-meeko@^1.7.77:
-  version "1.7.77"
-  resolved "https://registry.yarnpkg.com/meeko/-/meeko-1.7.77.tgz#cc266b13ee75e5442039974f15958b38a2b62693"
-  integrity sha512-lQCVj76qm3SBecfdZdzcGkdClyJD9TGUohohEe8eCtGpBixQByOOJ6Z0WCLHKGJs3IKXsiqSQNtF5EnYpgms7Q==
+meeko@^1.7.78:
+  version "1.7.78"
+  resolved "https://registry.yarnpkg.com/meeko/-/meeko-1.7.78.tgz#dfdf455ad7ed56ed6280ff59b3e6cb0a657052a2"
+  integrity sha512-8xYPd46ElWSWGjAL1h1QN1EZVW/NZLSaBHnL0x3ew9iTN67rTlMK8OcRcH9mdzGu+hhwc3xSwdb8ByaJIBnY1w==
 
 mem@^4.0.0:
   version "4.3.0"
