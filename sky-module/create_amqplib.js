@@ -16,14 +16,14 @@ module.exports = async (rmq) => {
     })
 
     MQ.on('error', function (e) {
-      $.err($.c.r('✘'), `-x- rabbitMQ [${$.c.yellow}${rmq.host} : ${rmq.port}${$.c.none}] disconnect...`)
+      $.err($.c.r('✘'), `-x- rabbitMQ [${$.c.y(`${rmq.host} : ${rmq.port}`)}] disconnect...`)
     })
 
-    $.log($.c.g('✔'), `rabbitMQ [${$.c.yellow}${rmq.host} : ${rmq.port}${$.c.none}]`)
+    $.log($.c.g('✔'), `rabbitMQ [${$.c.y(`${rmq.host} : ${rmq.port}`)}]`)
 
     return MQ
   } catch (e) {
-    $.err($.c.r('✘'), `-x- rabbitMQ [${$.c.yellow}${rmq.host} : ${rmq.port}${$.c.none}] disconnect...`)
+    $.err($.c.r('✘'), `-x- rabbitMQ [${$.c.y(`${rmq.host} : ${rmq.port}`)}] disconnect...`)
   }
   return false
 }
