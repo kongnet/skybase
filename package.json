@@ -1,6 +1,6 @@
 {
   "name": "skybase",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "description": "sky框架",
   "main": "index.js",
   "directories": {
@@ -29,6 +29,7 @@
     "amqplib": "^0.5.3",
     "bluebird": "^3.5.4",
     "figlet": "^1.2.1",
+    "fs": "^0.0.1-security",
     "ioredis": "^4.10.0",
     "j2sql": "^1.9.25",
     "kafka-node": "^4.1.3",
