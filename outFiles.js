@@ -32,7 +32,7 @@ async function outProjectCode (option) {
     await outPutFile(option.name, '', fileTree, option)
     if (option.initModelsMap[k] && option.initModelsMap[k].outFile) {
       // await option.initModelsMap[k].outFile(option.name, `${option.dirName}/../node_modules/skybase-${k}/`)
-      await option.initModelsMap[k].outFile(option.name, `${__dirname}/../../node_modules/skybase-${k}/`)
+      await option.initModelsMap[k].outFile(option.name, `${option.dirName}/../../node_modules/skybase-${k}/`)
     }
   }
 }
