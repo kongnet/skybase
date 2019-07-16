@@ -13,19 +13,19 @@ async function outProjectCode (option) {
 
   let fileTree = {
     config: {
-      'index.js': getConfigIndex(),
-      'config.default.js': getConfigDefault(option)
+      'index.js': getConfigIndex(), // 直接拷贝代码
+      'config.default.js': getConfigDefault(option) // 外部依赖 代码修改
     },
     model: {
       api: {
-        'demo.js': getModelApiDemo()
+        'demo.js': getModelApiDemo() // 直接拷贝代码
       }
     },
     router: {
-      'demo.js': getRouterDemo()
+      'demo.js': getRouterDemo() // 直接拷贝代码
     },
-    'index.js': getIndex(option),
-    'package.json': getPackage(option)
+    'index.js': getIndex(option), // 外部依赖 代码修改
+    'package.json': getPackage(option) // 项目名称修整
   }
 
   for (let k in option.initModelsMap) {
@@ -40,7 +40,7 @@ async function outProjectCode (option) {
 // package.json
 function getPackage (option) {
   let file = {
-    'name': option.name,
+    'name': option.name, // 项目名称
     'version': '1.0.0',
     'main': 'index.js',
     'dependencies': {
@@ -60,14 +60,14 @@ function getIndex (option) {
   let addBeforeMount = ''
   let addCommon = {} // commonModelName --- bool
 
-  for (let k in option.initModelsMap) {
+  for (let k in option.initModelsMap) { // 独立配置增加，比如stat 需要连接单独的redis或mq队列等等
     if (option.initModelsMap[k].codeConfig && option.initModelsMap[k].codeConfig.index) {
       addRequire += option.initModelsMap[k].codeConfig.index.require || ''
       addFunc += option.initModelsMap[k].codeConfig.index.func || ''
       addFuncCall += option.initModelsMap[k].codeConfig.index.funcCall || ''
       addBeforeMount += option.initModelsMap[k].codeConfig.index.beforeMount || ''
     }
-    if (option.initModelsMap[k].codeConfig && option.initModelsMap[k].codeConfig.common) { // 增加公用模块
+    if (option.initModelsMap[k].codeConfig && option.initModelsMap[k].codeConfig.common) { // 增加公用模块 所有项目一起使用 redis、mysql等等配置
       for (let kk in option.initModelsMap[k].codeConfig.common) {
         if (!addCommon[kk] && option.initModelsMap[k].codeConfig.common[kk].index) {
           addRequire += option.initModelsMap[k].codeConfig.common[kk].index.require || ''
@@ -104,11 +104,11 @@ ${addFunc}
 // 获取默认配置
 function getConfigDefault (option) {
   let addFile = ''
-  let addCommon = {} // commonModelName --- bool
+  let addCommon = {} // 判断公用配置不重复添加 commonModelName --- bool
   for (let k in option.initModelsMap) {
     if (option.initModelsMap[k].codeConfig) {
-      addFile += option.initModelsMap[k].codeConfig.config || ''
-      if (option.initModelsMap[k].codeConfig.common) { // 增加公用模块
+      addFile += option.initModelsMap[k].codeConfig.config || '' // 独立配置增加，比如stat 需要连接单独的redis或mq队列等等
+      if (option.initModelsMap[k].codeConfig.common) { // 增加公用模块 所有项目一起使用 redis、mysql等等配置
         for (let kk in option.initModelsMap[k].codeConfig.common) {
           if (!addCommon[kk]) {
             addFile += option.initModelsMap[k].codeConfig.common[kk].config || ''
