@@ -25,6 +25,7 @@ async function outProjectCode (option) {
       'demo.js': getRouterDemo() // 直接拷贝代码
     },
     'index.js': getIndex(option), // 外部依赖 代码修改
+    'nodemon.json': getNodemon(),
     'package.json': getPackage(option) // 项目名称修整
   }
 
@@ -35,6 +36,25 @@ async function outProjectCode (option) {
       await option.initModelsMap[k].outFile(option.name, `${option.dirName}/../../node_modules/skybase-${k}/`)
     }
   }
+}
+
+function getNodemon () {
+  return `
+{
+  "restartable": "rs",
+  "ignore": [
+    "*.txt",
+    ".git",
+    "www",
+    "output",
+    "tests",
+    "tools",
+    "mochawesome-report",
+    "mochawesome-reports",
+    "front"
+  ],
+  "verbose": false
+}`
 }
 
 // package.json
