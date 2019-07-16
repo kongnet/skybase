@@ -149,7 +149,7 @@ const envMap = {
 
 let env = process.env.NODE_ENV
 
-// 有这个之后，启动时 node .\index.js local 即可指定环境
+// 有这个之后，启动时 node ./index.js local 即可指定环境
 if (!env && process.argv[2]) {
   env = process.argv[2]
 }
