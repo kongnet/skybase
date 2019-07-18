@@ -1,4 +1,8 @@
-// 队列消费者
+/**
+ * 队列消费者
+ *
+ * 启动方式： node ./demo/3-full-module/rabbit-consumer.js
+ * */
 
 'use strict'
 
