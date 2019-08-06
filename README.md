@@ -2,23 +2,22 @@
 Sky web base suit
 
 ## 安装 Install
-``` js
-npm i skybase
-```
-## 开始你的web世界 Hello World
-``` js
-const sky = require('skybase')
 
-sky.start({
-  rootDir: __dirname
-}, async () => {
-  console.log('Program running...')
-})
-```
+
+    npm i skybase
+
+
+## 开始你的web世界 Hello World
+
+    const sky = require('skybase')
+    
+    sky.start({}, async () => {
+      console.log('Program running...')
+    })
 
 ## start(config, afterStart)
 
-skybase只有这一个方法
+skybase只有一个方法
 
 * config 配置
 * afterStart 启动成功后执行的方法，可用async方法
