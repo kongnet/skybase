@@ -5,11 +5,13 @@ module.exports = {
   /**
    * 项目名称，启动时，会以3D字体的形式在控制台打印
    * */
+
   name: 'skybase',
 
   /**
    * token 保存key值
    * */
+
   tokenName: 'skybase',
 
   /**
@@ -17,11 +19,13 @@ module.exports = {
    *
    * 由于不能知道require本应用的文件的路径，所以只能让外面定义这个根目录了
    * */
+
   rootDir: path.join(__dirname, '../../'),
 
   /**
    * 是否开启webServer，开启了才会监听端口
    * */
+
   isWebServer: true,
 
   /**
@@ -31,6 +35,7 @@ module.exports = {
    *
    * 填写相对于项目入口文件的相对路径
    * */
+
   apiDir: './model/api',
 
   /**
@@ -40,6 +45,7 @@ module.exports = {
    *
    * 填写相对于项目入口文件的相对路径
    * */
+
   routerDir: './router',
 
   /**
@@ -48,11 +54,13 @@ module.exports = {
    * 框架会自动加载service，并为每个service指定一个固定的错误码，当该service发生错误时，会打印该错误码
    * 如果不要该功能，把此配置设为空即可
    * */
+
   serviceDir: '',
 
   /**
    * 是否打印日志
    * */
+
   logger: true,
 
   /**
@@ -62,6 +70,7 @@ module.exports = {
    *
    * 填写相对于项目入口文件的相对路径
    * */
+
   middlewareDir: './middleware',
 
   /**
@@ -69,6 +78,7 @@ module.exports = {
    *
    * 填写相对于项目入口文件的相对路径
    * */
+
   staticDir: './www',
 
   /**
@@ -88,6 +98,7 @@ module.exports = {
    * output --- 记录api操作日志
    * apiRegister --- 注册api，要在以上两个之后注册，因为以上两个要记录api的执行时间。一般这个都放在数组最后，因为api不会再next后续的中间件了
    * */
+
   middlewares: [
     'sky-cors',
     'sky-body-parse',
@@ -101,6 +112,7 @@ module.exports = {
   /**
    * 限制post来的数据，这个配置将在 sky/middleware/bodyParse.js 中使用
    */
+
   bodyParse: {
     multipart: !0,
     formLimit: '100mb', // 100M 文件上传限制

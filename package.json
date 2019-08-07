@@ -46,10 +46,12 @@
   "devDependencies": {
     "amqplib": "^0.5.3",
     "babel-eslint": "^10.0.2",
-    "cc-jt": "^0.1.2",
+    "cc-jt": "^0.1.21",
     "co-mocha": "^1.2.2",
     "cz-jt": "^0.1.7",
-    "eslint": "^6.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "standard": "^12.0.1"

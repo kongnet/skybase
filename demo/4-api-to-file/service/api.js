@@ -23,13 +23,13 @@ module.exports = {
 // 返回当前目录中所有的 api 目录结构
 async function list (arg) {
   if (arg.name.indexOf('..') >= 0) {
-    return { code: 400, msg: `路径有误` }
+    return { code: 400, msg: '路径有误' }
   }
 
   let readDir = apiDir + arg.name + '/'
   let isExist = fs.existsSync(readDir) // 判断目录是否存在
   if (!isExist) {
-    return { code: 400, msg: `当前路径不存在` }
+    return { code: 400, msg: '当前路径不存在' }
   }
   let tmp = await fs.readdirSync(readDir) // 读取目录下 详情
   let list = []
@@ -45,7 +45,7 @@ async function list (arg) {
 
 async function info (arg) {
   if (arg.fileName.indexOf('..') >= 0) {
-    return { code: 400, msg: `路径有误` }
+    return { code: 400, msg: '路径有误' }
   }
   // 获取某个接口详情
   let readFile = apiDir + arg.fileName
@@ -74,12 +74,12 @@ async function info (arg) {
     return { code: 0, data: obj }
   }
 
-  return { code: 400, msg: `目录读取异常` }
+  return { code: 400, msg: '目录读取异常' }
 }
 
 async function update (arg) {
   if (arg.fileName.indexOf('..') >= 0) {
-    return { code: 400, msg: `路径有误` }
+    return { code: 400, msg: '路径有误' }
   }
 
   // 检查json
@@ -107,7 +107,7 @@ async function update (arg) {
 
 async function output (arg) {
   if (arg.fileName.indexOf('..') >= 0) {
-    return { code: 400, msg: `路径有误` }
+    return { code: 400, msg: '路径有误' }
   }
 
   let writeFile = apiDir + arg.fileName

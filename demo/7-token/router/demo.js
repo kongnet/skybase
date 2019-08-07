@@ -20,7 +20,8 @@ module.exports = {
 async function setToken (obj) { // obj - 存放对象
   try {
     let s = obj.id + ' ' + +new Date()
-    let token = Crypto.createHmac('sha256', s.slice(0, 5)).update(s).digest('base64')
+    let token = Crypto.createHmac('sha256', s.slice(0, 5)).update(s)
+      .digest('base64')
     let keyStr = Config.tokenName + ':userlogin:' + token
     if (await redis.setex(keyStr, tokenSaveTime, JSON.stringify(obj)) === 'OK') { // 保存2个小时
       // 删除原先的登录凭证
