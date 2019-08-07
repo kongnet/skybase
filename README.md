@@ -192,3 +192,8 @@ skybase框架的api定义功能主要有以下几点：
 
 * 如果以 / 开始，接口路径则完全等于所编写的地址
 * 否则接口路径的规则为：
+
+## 实操案例
+1. 运行 npm run demo5 //启动mock服务器，前提需要有nodemon全局安装 npm i -g nodemon
+2. 启动后 访问 http://127.0.0.1:8888/mock/first
+3. mock定义在 你的项目\node_modules\skybase\demo\5-mock-api\model\api\mock.js
