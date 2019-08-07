@@ -1,4 +1,6 @@
 # skybase
+![jiatuiLogo](https://github.com/kongnet/skybase/raw/master/screenShot/logo.png)
+
 Sky web base suit
 
 ## 安装 Install
@@ -194,6 +196,7 @@ skybase框架的api定义功能主要有以下几点：
 * 否则接口路径的规则为：
 
 ## 实操案例
-1. 运行 npm run demo5 //启动mock服务器，前提需要有nodemon全局安装 npm i -g nodemon
-2. 启动后 访问 http://127.0.0.1:8888/mock/first
-3. mock定义在 你的项目\node_modules\skybase\demo\5-mock-api\model\api\mock.js
+### mock服务器
+* 1. 运行 npm run demo5 //启动mock服务器，前提需要有nodemon全局安装 npm i -g nodemon
+* 2. 启动后 访问 http://127.0.0.1:8888/mock/first
+* 3. mock定义在 [您的项目]\node_modules\skybase\demo\5-mock-api\model\api\mock.js
