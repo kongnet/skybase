@@ -17,23 +17,16 @@ module.exports = {
   /**
    * 入口文件的路径
    *
-   * 由于不能知道require本应用的文件的路径，所以只能让外面定义这个根目录了
+   * 如果不填，或者转为布尔值为false，则使用 process.mainModule.filename 的路径，即本node应用的入口文件
    * */
-
-  rootDir: path.join(__dirname, '../../'),
-
-  /**
-   * 是否开启webServer，开启了才会监听端口
-   * */
-
-  isWebServer: true,
+  rootDir: path.dirname(process.mainModule.filename),
 
   /**
    * api定义所在目录
    *
-   * 如果 isWebServer 为 true，此项必填
+   * 如果 middlewares 中有 sky-api-register ，此项必填
    *
-   * 填写相对于项目入口文件的相对路径
+   * 填写相对于 rootDir 的相对路径
    * */
 
   apiDir: './model/api',
@@ -41,9 +34,9 @@ module.exports = {
   /**
    * 控制器所在目录
    *
-   * 如果 isWebServer 为 true，此项必填
+   * 如果 middlewares 中有 sky-api-register ，此项必填
    *
-   * 填写相对于项目入口文件的相对路径
+   * 填写相对于 rootDir 的相对路径
    * */
 
   routerDir: './router',
@@ -53,6 +46,8 @@ module.exports = {
    *
    * 框架会自动加载service，并为每个service指定一个固定的错误码，当该service发生错误时，会打印该错误码
    * 如果不要该功能，把此配置设为空即可
+   *
+   * 填写相对于 rootDir 的相对路径
    * */
 
   serviceDir: '',
@@ -64,19 +59,21 @@ module.exports = {
   logger: true,
 
   /**
-   * 控制器所在目录
+   * 自定义中间件所在目录
    *
-   * 如果 isWebServer 为 true，此项必填
+   * 如果要用中间件，除了把中间件放在这个目录下，还要在 middlewares 中填写中间件名称
    *
-   * 填写相对于项目入口文件的相对路径
+   * 填写相对于 rootDir 的相对路径
    * */
 
   middlewareDir: './middleware',
 
   /**
-   * 静态服务的路径，如果为空，则不会启动静态服务
+   * 静态服务的路径
    *
-   * 填写相对于项目入口文件的相对路径
+   * 如果 middlewares 中有 sky-static-server ，此项必填
+   *
+   * 填写相对于 rootDir 的相对路径
    * */
 
   staticDir: './www',

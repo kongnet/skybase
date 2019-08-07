@@ -26,7 +26,9 @@ config.beforeMount = async () => {
   global.redis = redis
 
   // 连接mq
-  global.MQ = await createRbmq(config.rabbitMQ)
+  global.MQ = await createRbmq(config.rabbitMQ, (mq) => {
+    global.MQ = mq
+  })
 }
 
 sky.start(config, async () => {
