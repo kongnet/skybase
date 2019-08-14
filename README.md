@@ -200,3 +200,8 @@ skybase框架的api定义功能主要有以下几点：
 * 1. 运行 npm run demo5 //启动mock服务器，前提需要有nodemon全局安装 npm i -g nodemon
 * 2. 启动后 访问 http://127.0.0.1:8888/mock/first
 * 3. mock定义在 [您的项目]\node_modules\skybase\demo\5-mock-api\model\api\mock.js
+
+### mysql探针
+* 1. 运行 npm run demo9 //启动mysql探针服务器，前提需要有nodemon全局安装 npm i -g nodemon
+* 2. 启动后 访问 http://127.0.0.1:13000/skyapi/probe/mysql
+![demo9](https://github.com/kongnet/skybase/raw/master/screenShot/demo9.png)
