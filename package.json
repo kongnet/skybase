@@ -21,7 +21,8 @@
     "demo5": "nodemon demo/5-mock-api/index.js",
     "demo6": "nodemon demo/6-sql-test/index.js",
     "demo7": "nodemon demo/7-token/index.js",
-    "demo8": "nodemon demo/8-test/index.js"
+    "demo8": "nodemon demo/8-test/index.js",
+    "demo9": "nodemon demo/9-mysql-chart/index.js"
   },
   "author": "",
   "license": "MIT",

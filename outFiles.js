@@ -184,7 +184,7 @@ try {
   console.log('\x1b[2;31m' + \`【普通错误】\${env}配置文件缺失，将使用default配置\` + '\x1b[m')
 }
 $.option.logTime = 0
-$.log(\`=======================\n   NODE_ENV:\${$.c.g(\` \${env}  \`)}  \n=======================\`)
+$.log(\`   NODE_ENV:\${$.c.g(\` \${env}  \`)}`)
 module.exports = { ...defConfig, ...config }
 `
   return file
