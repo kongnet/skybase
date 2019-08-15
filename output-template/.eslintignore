@@ -5,7 +5,14 @@ node_modules
 coverage
 jtFrontCheck.html
 jtFrontEasyCheck.html
+out
+test
+tests
+node_modules
+coverage
+jtFrontCheck.html
 .DS_Store
+node_modules/
 dist/
 npm-debug.log*
 yarn-debug.log*
@@ -20,9 +27,12 @@ test??.js
 *.ntvs*
 *.njsproj
 *.sln
+config.local.js
 
+.vscode/
 .logs
 .nyc_output
+coverage
 mochawesome-report
 # 开发环境的配置就不用上传了
 config/config.local.js
