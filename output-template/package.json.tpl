@@ -14,8 +14,15 @@
     "ioredis": "^4.9.5",
     "j2sql": "^1.9.21",
     "kafka-node": "^4.1.3",
+    "cz-jt": "*",
     "mock": "*",
     "skybase": "*",
-    "meeko": "*"
+    "meeko": "*",
+    "standard": "^12.0.1"
+  },
+    "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-jt"
+    }
   }
 }
