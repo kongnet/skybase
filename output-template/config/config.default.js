@@ -8,7 +8,7 @@ module.exports = {
     port: 3306,
     user: 'root',
     password: '123456',
-    database: 'test',
+    database: 'mysql', // 一般root才有访问此数据库权限
     pool: 1000,
     timeout: 60000,
     charset: 'utf8mb4',
