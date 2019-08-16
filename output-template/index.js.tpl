@@ -4,11 +4,12 @@ const $ = require('meeko')
 
 config.beforeMount = async () => {
   // 连接mysql
-  /*
+
   const db = require('j2sql')(config.mysql)
   await $.tools.waitNotEmpty(db, '_mysql')
   global.db = db
 
+  /*
   // 连接mysql main实例
   const dbMain = require('j2sql')(config.mysqlMain)
   await $.tools.waitNotEmpty(dbMain, '_mysql')
