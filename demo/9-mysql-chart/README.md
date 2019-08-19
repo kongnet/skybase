@@ -9,11 +9,29 @@
 
 ## 项目实操
 
- 1. 项目地址 [skybase](https://github.com/kongnet/skybase)
- 2. clone后，安装全局nodemon,npm i -g nodemon.
- 3. 运行demo9,npm run demo9，启动数据库探针
- 4. 最终效果
-    ![最终效果](src/treemap.png)
+  - 方式一
+
+    1. 项目地址 [skybase](https://github.com/kongnet/skybase)
+    2. clone后，安装全局nodemon,npm i -g nodemon.
+    3. 运行demo9,npm run demo9，启动数据库探针
+    4. 最终效果
+        ![最终效果](src/treemap.gif)
+  - 方式二
+
+    1. 项目地址： [skyjt](https://github.com/kongnet/sky)
+    2. 安装 npm i -g skyjt
+    3. 创建新的文件夹，cd 进入，执行
+        - jt init -f
+        ![init](src/init.gif)
+    4. cd 进test，执行 npm i，
+    5. 安装全局nodemon,npm i -g nodemon.
+    6. 执行 node index
+    7. 最终效果同方法一
+  - 注意
+
+      请确认数据库链接正常，且有一定的数据.
+
+      推荐使用方法一
 
 ## 项目运行流程
 
@@ -33,7 +51,7 @@
     │   ├── config.test.js    // 测试环境数据库配置
     │   └── index.js          // 环境判断
     ├── index.js              //项目执行文件
-    ├── model
+    ├── model                 //API定义 抽象类所处位置
     │   └── api
     │       └── skyapi
     │           └── probe.js
@@ -66,11 +84,11 @@
         let arrSize = []
         let obj = {}
         r.forEach(item => {
-          if (obj[item.dbName]) {
+          if (obj[item.dbName]) { // 如果存在节点就插入到children
             arr[obj[item.dbName]].children.push({ name: item.tableComment + '\n' + item.tableName + '\n\n' + ((item.rowCount + '').toMoney(2)), value: item.rowCount || 0 })
             arrSize[obj[item.dbName]].children.push({ name: item.tableComment + '\n' + item.tableName + '\n\n' + ((item.dataSize + '').toMoney(2)), value: item.dataSize || 0 })
-          } else {
-            if (!['performance_schema', 'mysql', 'information_schema', 'sys', 'happyminer_test'].includes(item.dbName)) {
+          } else { // 如果不存在节点就创建
+            if (!['performance_schema', 'mysql', 'information_schema', 'sys', 'happyminer_test'].includes(item.dbName)) { // 需要忽略的数据库
               // es7方法: includes
               // 如 [1, 2, 3].includes(2); // true
               // 在es7之前使用indexOf来判断数组中是否包含某个值。
