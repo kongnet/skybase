@@ -20,7 +20,7 @@ module.exports = {
             }
           ]
         }
-        ctx.type ='html'
+        ctx.type = 'html'
         ctx.body = $.tpl(f.toString()).render(obj)
       } else {
         ctx.ok(r)

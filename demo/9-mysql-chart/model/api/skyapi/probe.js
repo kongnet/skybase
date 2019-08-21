@@ -21,5 +21,24 @@ module.exports = {
     'err_code': {},
     'test': {},
     'front': true
+  },
+  'mysqlTree': {
+    name: 'mysql探针数据',
+    desc: 'mysql探针数据',
+    method: 'get',
+    controller: 'mysqlProbe.getTableColumn',
+    param: {
+      outputType: {
+        name: '输出类型',
+        desc: '接口输出html或者json',
+        def: 'html',
+        type: 'string'
+      }
+    },
+    'token': false,
+    'needSign': false,
+    'err_code': {},
+    'test': {},
+    'front': true
   }
 }

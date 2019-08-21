@@ -1,12 +1,7 @@
 /* global db */
 const Package = require('../package.json')
 
-module.exports = {
-  getTableColumnSize
-}
-
-async function getTableColumnSize () {
-  let sql = `select
+let sql = `select
   table_schema as 'dbName',
   table_name as 'tableName',
   table_rows as 'rowCount',
@@ -15,6 +10,8 @@ async function getTableColumnSize () {
   table_comment as 'tableComment'
   from information_schema.tables
   order by data_length desc, index_length desc;`
+
+async function getTableColumnSize () {
   let r = await db.cmd(sql).run()
   let arr = []
   let arrSize = []
@@ -37,4 +34,29 @@ async function getTableColumnSize () {
     code: 0,
     data: { tableRow: arr, tableSize: arrSize }
   }
+}
+async function getTableColumn () {
+  let r = await db.cmd(sql).run()
+  let arr = []
+  let obj = {}
+  r.forEach(item => {
+    if (obj[item.dbName]) {
+      arr[obj[item.dbName]].children.push({ name: item.tableComment + ' ' + item.tableName })
+    } else {
+      if (!['performance_schema', 'mysql', 'information_schema', 'sys', 'happyminer_test'].includes(item.dbName)) {
+        arr.push({ name: item.dbName, children: [] })
+        obj[item.dbName] = arr.length - 1
+      }
+    }
+  })
+  arr.shift()
+  // console.log(arr)
+  return {
+    code: 0,
+    data: { tableColum: arr }
+  }
+}
+module.exports = {
+  getTableColumnSize,
+  getTableColumn
 }
