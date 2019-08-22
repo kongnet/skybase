@@ -1,18 +1,75 @@
-myChart.showLoading();
-$.get('data/asset/data/flare.json', function (data) {
-    myChart.hideLoading();
- var container = document.getElementById('chart-panel');
-      container.style.height =  '8000px';
-    echarts.util.each(data.children, function (datum, index) {
-        index % 2 === 0 && (datum.collapsed = true);
-    });
-data = [{"name":"root","children":[{"name":"zc_test","children":[{"name":"公司详细信息\nsiti\n\n3,761","value":3761},{"name":"云端列表\ntest_zc_cloud_list\n\n866","value":866},{"name":"\ntest_zc_change\n\n262","value":262},{"name":"用户明细\ntest_zc_users\n\n22,166","value":22166},{"name":"\nsiti_client_users\n\n3,200","value":3200},{"name":"需求方\nsiti_demandside\n\n3,190","value":3190},{"name":"财经日历最新信息\nzc_econoday\n\n1,841","value":1841},{"name":"\ntest_zc_private_chat\n\n3,229","value":3229},{"name":"\ntest_zc_register\n\n76","value":76},{"name":"农业抓取\ntest_zc_agriculture\n\n227","value":227},{"name":"\ntest_zc_comment\n\n2,652","value":2652},{"name":"\ngps_record\n\n3,371","value":3371},{"name":"上传的版本信息\ntest_zc_gitlab_hook\n\n1,717","value":1717},{"name":"行政区域树形结构\nkong_xingzheng\n\n3,513","value":3513},{"name":"用户明细延伸表\ntest_zc_users_extra\n\n1,898","value":1898},{"name":"\nhedge\n\n967","value":967},{"name":"\ntest\n\n13","value":13},{"name":"\ntest_collection\n\n310","value":310},{"name":"用户账户\ntest_zc_balance\n\n1,814","value":1814},{"name":"时间计划\nzc_plan_timer\n\n1,261","value":1261},{"name":"\ntest_zc_tips\n\n94","value":94},{"name":"\ntest_zc_main_tree_backup\n\n308","value":308},{"name":"项目管理及指标信息\ntest_zc_main_tree\n\n308","value":308},{"name":"用户收藏公司情况\nsiti_collect\n\n18","value":18},{"name":"通知\ntest_zc_announcement\n\n897","value":897},{"name":"已发布的版本信息\nzc_version\n\n238","value":238},{"name":"\necono_translate\n\n235","value":235},{"name":"\nv_users\n\n4","value":4},{"name":"\ntest_gps_users\n\n9","value":9},{"name":"管理员账户明细\nadmin_users\n\n10","value":10},{"name":"\nadd_users\n\n15","value":15},{"name":"\naaa_users\n\n10","value":10},{"name":"会员\ntest_zc_member_user\n\n6","value":6},{"name":"\ntuser\n\n20","value":20},{"name":"账户创建日期\ntest_zc_credit\n\n","value":0},{"name":"\nkk\n\n","value":0},{"name":"\ntest_zc_questionnaire\n\n46","value":46},{"name":"\ntest_zc_account_simulate\n\n","value":0},{"name":"\nuserinfo\n\n","value":0},{"name":"利润\ntest_zc_profit\n\n","value":0},{"name":"\ntest_msg_list\n\n168","value":168},{"name":"SITI用户信息\nsiti_user\n\n36","value":36},{"name":"用户评论信息\nfeedback\n\n69","value":69},{"name":"项目方\nsiti_project\n\n13","value":13},{"name":"项目管理及指标信息\ntest_zc_main_tree_copy1\n\n","value":0},{"name":"\ntest_123\n\n8","value":8},{"name":"\ntest_zc_calendar\n\n","value":0},{"name":"项目管理及指标信息\ntest_zc_main_tree_copy\n\n","value":0},{"name":"\ncar_user\n\n2","value":2},{"name":"\nzc_main_tree\n\n","value":0},{"name":"\nzc_img\n\n64","value":64},{"name":"后台生成脚本文件\ntest_zc_script\n\n7","value":7},{"name":"\nproject_bg\n\n","value":0},{"name":"红包\ntest_zc_red\n\n37","value":37},{"name":"\ntest_zc_acct_flow\n\n","value":0},{"name":"\ntest_zc_customer_service\n\n2","value":2},{"name":"\ntest_zc_questionnaire_collection\n\n7","value":7},{"name":"\ntest_zc_account_trade_setting\n\n","value":0},{"name":"VIEW\ntest_zc_user_view\n\n2","value":0}]},{"name":"new_super_ip","children":[{"name":"笔记关联商品表\nnote_products_copy\n\n2,088","value":2088},{"name":"行政区划表\narea\n\n3,716","value":3716},{"name":"第三方平台类目\nplatform_category_jf\n\n1,749","value":1749},{"name":"文件资源\nuser_file\n\n1,164","value":1164},{"name":"分类对应SKU\ncategory_sku\n\n2,389","value":2389},{"name":"用户信息表\nuser\n\n6","value":6},{"name":"用户互动log。feeds流、分享路径都可以在这表查到\nuser_interaction\n\n","value":0},{"name":"运营后台 用户的登录方式\nadmin_user_login_pwd\n\n5","value":5},{"name":"运营后台 用户信息表\nadmin_user\n\n2","value":2},{"name":"用户通讯录表\nuser_card_friend\n\n","value":0},{"name":"笔记表，用户写的笔记，运营写的笔记，都混在这里面\nuser_note\n\n4","value":4},{"name":"充值订单表\npayments\n\n","value":0},{"name":"用户的登录方式\nuser_login_pwd\n\n6","value":6},{"name":"用户评论\nuser_comment\n\n1","value":1},{"name":"资金流水表_商品\nmoney_logs_goods\n\n","value":0},{"name":"用户收藏\nuser_collection\n\n1","value":1},{"name":"选品-订单商品表\nmall_order_goods\n\n","value":0},{"name":"用户购买名片订单表\nuser_card_order\n\n","value":0},{"name":"用户交互名片信息表\nuser_card_exchange\n\n","value":0},{"name":"选品-订单表\nmall_order\n\n","value":0},{"name":"钱包\nwallet\n\n","value":0},{"name":"名片夹表\nuser_card_holder\n\n27","value":27},{"name":"名片表\nuser_card\n\n4","value":4},{"name":"官方/用户标签表，所有类型的标签都在这\nlabel\n\n20","value":20},{"name":"用户关系表\nuser_relation\n\n2","value":2},{"name":"此表由hMigration.js自动生成，如果删除，将丢失当前数据库版本的记录\n_h_migration\n\n66","value":66},{"name":"资金流水表。一个订单会让多个用户产生资金流水，所以需要独立一个表\nuser_money_log\n\n","value":0},{"name":"用户升级时填写收货地址\ncard_receiving_address\n\n","value":0},{"name":"资金流水表_系统(充值，升级，提现)\nmoney_logs_system\n\n","value":0},{"name":"cardId对照index表\ncard_id_change\n\n","value":0},{"name":"提现确认单\nwithdraws_page\n\n","value":0},{"name":"白名单表\nwhite_page\n\n","value":0},{"name":"提现表\nwithdraws\n\n","value":0},{"name":"常用语\nim_phrase\n\n","value":0},{"name":"\nmall_goods_category_jf\n\n11","value":11},{"name":"分享链路表。用户分享任何东西前，先在此表建一条记录，把此表的id带出去，别人进来，就知道本次分享的完整链路了\nuser_share\n\n","value":0},{"name":"财务后台操作记录\nadmin_log\n\n","value":0},{"name":"小程序formId保存\nim_form_id\n\n","value":0},{"name":"消息表\nim\n\n2","value":2},{"name":"官方字典表，记录一些用于对照的数据\ndict\n\n","value":0},{"name":"云账户信息保存\npay_key_config\n\n","value":0},{"name":"Banner表(选品banner、商品分类banner)\ncommon_banner\n\n","value":0}]},{"name":"ips","children":[{"name":"行政区域树形结构\nkong_xingzheng\n\n3,493","value":3493},{"name":"IP多图文介绍表\nip_richinfo\n\n28","value":28},{"name":"精英多图文信息表\nperson_richinfo\n\n46","value":46},{"name":"元定义表\nmetadefined\n\n32","value":32},{"name":"IP详情表\nip_detail\n\n32","value":32},{"name":"用户收藏信息表\nuser_favorite\n\n52","value":52},{"name":"会议简介\r\n\nmeeting\n\n13","value":13},{"name":"用户信息表\nuser\n\n19","value":19},{"name":"\ntest\n\n","value":0},{"name":"后台角色表\nroles\n\n4","value":4},{"name":"IP基本信息表\nip\n\n30","value":30},{"name":"IP/person文件上传\nfileupload\n\n54","value":54},{"name":"精英信息表\nperson\n\n26","value":26},{"name":"问答表\nfaq\n\n24","value":24},{"name":"首页咨询\nconsult\n\n16","value":16},{"name":"admin_menu\nadmin_menu_copy\n\n17","value":17},{"name":"首页广告\nbanner\n\n3","value":3},{"name":"admin_menu\nadmin_menu\n\n19","value":19},{"name":"后台用户表\nmember\n\n3","value":3},{"name":"用户消息表\nuser_message\n\n50","value":50},{"name":"合作大会banner\nmeeting_banner\n\n3","value":3},{"name":"VIEW\nv_msgperson\n\n2","value":0},{"name":"VIEW\nv_msgip\n\n2","value":0},{"name":"VIEW\nv_meetinglist\n\n2","value":0},{"name":"VIEW\nv_ipmore\n\n2","value":0},{"name":"VIEW\nv_ipsuccess\n\n2","value":0},{"name":"VIEW\nv_iplist\n\n2","value":0},{"name":"VIEW\nv_records\n\n2","value":0},{"name":"VIEW\nv_ipprofile\n\n2","value":0},{"name":"VIEW\nv_iphome\n\n2","value":0},{"name":"VIEW\nv_question\n\n2","value":0},{"name":"VIEW\nv_ipdetail\n\n2","value":0},{"name":"VIEW\nv_personlist\n\n2","value":0},{"name":"VIEW\nv_ipbrief\n\n2","value":0},{"name":"VIEW\nv_personhome\n\n2","value":0},{"name":"VIEW\nv_grid\n\n2","value":0},{"name":"VIEW\nv_persondetail\n\n2","value":0},{"name":"VIEW\nv_form\n\n2","value":0},{"name":"VIEW\nv_newslist\n\n2","value":0},{"name":"VIEW\nv_consult\n\n2","value":0},{"name":"VIEW\nv_newsdetail\n\n2","value":0}]},{"name":"ghost","children":[{"name":"\naccesstokens\n\n","value":0},{"name":"\nrefreshtokens\n\n","value":0},{"name":"\nposts_tags\n\n23","value":23},{"name":"\nclients\n\n2","value":2},{"name":"\nusers\n\n5","value":5},{"name":"\napps\n\n","value":0},{"name":"\napp_settings\n\n","value":0},{"name":"\nclient_trusted_domains\n\n","value":0},{"name":"\ntags\n\n6","value":6},{"name":"\napp_fields\n\n","value":0},{"name":"\nsettings\n\n21","value":21},{"name":"\npermissions_apps\n\n","value":0},{"name":"\npermissions\n\n30","value":30},{"name":"\npermissions_users\n\n","value":0},{"name":"\nroles_users\n\n11","value":11},{"name":"\nroles\n\n4","value":4},{"name":"\npermissions_roles\n\n62","value":62}]},{"name":"super_center","children":[{"name":"第三方平台类目\nplatform_category_jf\n\n1,749","value":1749},{"name":"分类对应SKU\ncategory_sku\n\n2,389","value":2389},{"name":"文件资源\nuser_file\n\n205","value":205},{"name":"用户信息表\nuser\n\n6","value":6},{"name":"充值订单表\npayments\n\n","value":0},{"name":"用户的登录方式\nuser_login_pwd\n\n6","value":6},{"name":"笔记表，用户写的笔记，运营写的笔记，都混在这里面\nuser_note\n\n","value":0},{"name":"资金流水表。一个订单会让多个用户产生资金流水，所以需要独立一个表\nuser_money_log\n\n","value":0},{"name":"用户互动log。feeds流、分享路径都可以在这表查到\nuser_interaction\n\n","value":0},{"name":"资金流水表_商品\nmoney_logs_goods\n\n","value":0},{"name":"选品-订单商品表\nmall_order_goods\n\n","value":0},{"name":"用户收藏\nuser_collection\n\n","value":0},{"name":"选品-订单表\nmall_order\n\n","value":0},{"name":"用户购买名片订单表\nuser_card_order\n\n","value":0},{"name":"名片夹表\nuser_card_holder\n\n6","value":6},{"name":"官方/用户标签表，所有类型的标签都在这\nlabel\n\n19","value":19},{"name":"钱包\nwallet\n\n","value":0},{"name":"名片表\nuser_card\n\n1","value":1},{"name":"用户通讯录表\nuser_card_friend\n\n","value":0},{"name":"官方字典表，记录一些用于对照的数据\ndict\n\n","value":0},{"name":"用户关系表\nuser_relation\n\n","value":0},{"name":"此表由hMigration.js自动生成，如果删除，将丢失当前数据库版本的记录\n_h_migration\n\n57","value":57},{"name":"云账户信息保存\npay_key_config\n\n","value":0},{"name":"资金流水表_系统(充值，升级，提现)\nmoney_logs_system\n\n","value":0},{"name":"用户评论\nuser_comment\n\n","value":0},{"name":"提现确认单\nwithdraws_page\n\n","value":0},{"name":"提现表\nwithdraws\n\n","value":0},{"name":"\nmall_goods_category_jf\n\n11","value":11},{"name":"白名单表\nwhite_page\n\n","value":0},{"name":"用户交互名片信息表\nuser_card_exchange\n\n","value":0},{"name":"cardId对照index表\ncard_id_change\n\n","value":0},{"name":"Banner表(选品banner、商品分类banner)\ncommon_banner\n\n","value":0}]},{"name":"ghost_vr","children":[{"name":"\napps\n\n","value":0},{"name":"\napp_settings\n\n","value":0},{"name":"\nclients\n\n2","value":2},{"name":"\napp_fields\n\n","value":0},{"name":"\nposts\n\n1","value":1},{"name":"\nclient_trusted_domains\n\n","value":0},{"name":"\npermissions_users\n\n","value":0},{"name":"\npermissions_roles\n\n62","value":62},{"name":"\npermissions_apps\n\n","value":0},{"name":"\npermissions\n\n30","value":30}]},{"name":"sonar","children":[{"name":"运营后台 用户信息表\nadmin_user\n\n","value":0},{"name":"运营后台 角色表，用户创建的角色都在这\nadmin_role\n\n","value":0},{"name":"运营后台 菜单表，所有菜单都在这\nadmin_menu\n\n4","value":4},{"name":"此表由hMigration.js自动生成，如果删除，将丢失当前数据库版本的记录\n_h_migration\n\n4","value":4}]},{"name":"t-t_t-t","children":[{"name":"此表由hMigration.js自动生成，如果删除，将丢失当前数据库版本的记录\n_h_migration\n\n1","value":1},{"name":"资金流水表_系统(充值，升级，提现)\nmoney_logs_system\n\n","value":0},{"name":"资金流水表_商品\nmoney_logs_goods\n\n","value":0},{"name":"选品-订单商品表\nmall_order_goods\n\n","value":0},{"name":"选品-订单表\nmall_order\n\n","value":0},{"name":"第三方平台类目\nplatform_category_jf\n\n","value":0},{"name":"消息表\nim\n\n","value":0},{"name":"提现确认单\nwithdraws_page\n\n","value":0},{"name":"Banner表(选品banner、商品分类banner)\ncommon_banner\n\n","value":0},{"name":"提现表\nwithdraws\n\n","value":0},{"name":"白名单表\nwhite_page\n\n","value":0},{"name":"test2\ntest2\n\n","value":0},{"name":"测试数据表1\ntest1\n\n","value":0},{"name":"\nt1\n\n","value":0},{"name":"自定义主菜单类目\nmall_goods_category_jf\n\n","value":0},{"name":"云账户信息保存\npay_key_config\n\n","value":0},{"name":"常用语\nim_phrase\n\n","value":0},{"name":"小程序formId保存\nim_form_id\n\n","value":0}]},{"name":"test","children":[]}]}]
+<!DOCTYPE html>
+<html style="height: 100%">
 
-    data[0].children[0].itemStyle = {
+<head>
+    <meta charset="utf-8">
+    <style>
+        .content {
+            height: 100%;
+        }
+        .item {
+            float: left;
+            width: 100%;
+            height: 100%;
+            /*border: 1px solid red;*/
+            flex-grow: 1;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .header {
+            height: 32px;
+        }
+        .canvasBody {
+            height:  calc(100% - 32px);
+            box-sizing: border-box;
+            border: 1px dashed #414141;
+        }
+        @media (max-width: 720px) {
+            .item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div class="content">
+        <div class="item">
+            <div class="header">
+                <h3>{{d.title}}</h3>
+            </div>
+           <div class="canvasBody" id="container1"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=2.0&ak=GqVMFAj97CFNzEy1lLR1gvl4vNnKNjzE&__ec_v__=20190126"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+    <script type="text/javascript">
+      let container = document.getElementById("container1");
+      let data ={{JSON.stringify(d.tableColumn)}}
+      container.style.height = {{d.len}} * 10+'px'
+      let myChart = echarts.init(container);
+      /*myChart.showLoading()
+      myChart.hideLoading()
+        echarts.util.each(data.children, function (datum, index) {
+          datum.collapsed = true
+          index % 2 === 0 && (datum.collapsed = true);
+      })*/
+
+/*       data[0].children[0].itemStyle = {
         color : '#0000ff',
         borderColor:'#0000ff'
-    };
-    myChart.setOption(option = {
+      }; */
+      myChart.setOption(option = {
         tooltip: {
             trigger: 'item',
             triggerOn: 'mousemove'
@@ -20,21 +77,18 @@ data = [{"name":"root","children":[{"name":"zc_test","children":[{"name":"公司
         series: [
             {
                 type: 'tree',
-
                 data:data,
                 top: '1%',
-                left: '7%',
+                left: '5%',
                 bottom: '1%',
-                right: '50%',
-
-                symbolSize: 20,
-
+                right: '60%',
+                symbolSize: [15,15],
                 label: {
                     normal: {
                         position: 'left',
                         verticalAlign: 'middle',
                         align: 'right',
-                        fontSize: 14
+                        fontSize: 12
                     }
                 },
 
@@ -49,34 +103,35 @@ data = [{"name":"root","children":[{"name":"zc_test","children":[{"name":"公司
                 },
 
                 expandAndCollapse: true,
-                animationDuration: 550,
-                animationDurationUpdate: 750
+                animationDuration: 250,
+                animationDurationUpdate: 550
             }
         ]
     });
     myChart.on('click',function(){
+      let allNode=0;
+      let nodes=myChart._chartsViews[0]._data._graphicEls;
+        for(let i=0,count =nodes.length;i<count;i++){
+            let node=nodes[i];
+            if(node===undefined)
+                continue;
+                allNode++;
+            }
+      let height=window.innerHeight;
+      let currentHeight=20*allNode;
+      let newWidth=Math.max(currentHeight,height);
 
-
- var allNode=0;
-       var nodes=myChart._chartsViews[0]._data._graphicEls;
-       for(var i=0,count =nodes.length;i<count;i++){
-           var node=nodes[i];
-           if(node===undefined)
-               continue;
-           allNode++;
-        }
-          myChart.data.children[0].lineStyle = {
-        color : '#0000ff',
-        borderColor:'#0000ff'
-    }
- var height=window.innerHeight;
-        var currentHeight=35*allNode;
-        var newWidth=Math.max(currentHeight,height);
-        container.style.width = window.innerWidth + 'px';
-        container.style.height = newWidth + 'px';
-        myChart.resize();
+          container.style.width = window.innerWidth + 'px';
+          container.style.height = newWidth + 'px';
+          myChart.resize();
 
     })
+    </script>
+</body>
+
+</html>
 
 
-});
+
+
+

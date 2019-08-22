@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <style>
-        .content { 
+        .content {
             height: 100%;
         }
         .item {
@@ -80,7 +80,7 @@
             isResized = false
             setTimeout(() => {
                 // 在此重置
-            {{# for (let i=1; i<=len; i++) { }}                
+            {{# for (let i=1; i<=len; i++) { }}
                 myChart{{i}}.resize();
             {{# } }}
                 isResized = true;

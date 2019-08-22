@@ -8,7 +8,7 @@ module.exports = {
     port: 3306,
     user: 'root',
     password: '123456',
-    database: 'refrush',
+    database: 'test',
     // host: '172.16.0.6',
     // port: 3306,
     // user: 'root',

@@ -53,7 +53,7 @@ async function getTableColumn () {
   // console.log(arr)
   return {
     code: 0,
-    data: { tableColum: arr }
+    data: { tableColumn: arr, len: r.length }
   }
 }
 module.exports = {
