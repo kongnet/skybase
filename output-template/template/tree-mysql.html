@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .content {
+            height: 100%;
+        }
+        .item {
+            float: left;
+            width: 100%;
+            height: 100%;
+            /*border: 1px solid red;*/
+            flex-grow: 1;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .header {
+            height: 32px;
+        }
+        .canvasBody {
+            height:  calc(100% - 32px);
+            box-sizing: border-box;
+            border: 1px dashed #414141;
+        }
+        @media (max-width: 720px) {
+            .item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div class="content">
+        <div class="item">
+            <div class="header">
+                <h3>{{d.title}}</h3>
+            </div>
+           <div class="canvasBody" id="container1"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=2.0&ak=GqVMFAj97CFNzEy1lLR1gvl4vNnKNjzE&__ec_v__=20190126"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+    <script type="text/javascript">
+      let container = document.getElementById("container1");
+      let data ={{JSON.stringify(d.tableColumn)}}
+      container.style.height = {{d.len}} * 10+'px'
+      let myChart = echarts.init(container);
+      /*myChart.showLoading()
+      myChart.hideLoading()
+        echarts.util.each(data.children, function (datum, index) {
+          datum.collapsed = true
+          index % 2 === 0 && (datum.collapsed = true);
+      })*/
+
+/*       data[0].children[0].itemStyle = {
+        color : '#0000ff',
+        borderColor:'#0000ff'
+      }; */
+      myChart.setOption(option = {
+        tooltip: {
+            trigger: 'item',
+            triggerOn: 'mousemove'
+        },
+        series: [
+            {
+                type: 'tree',
+                data:data,
+                top: '1%',
+                left: '5%',
+                bottom: '1%',
+                right: '60%',
+                symbolSize: [15,15],
+                label: {
+                    normal: {
+                        position: 'left',
+                        verticalAlign: 'middle',
+                        align: 'right',
+                        fontSize: 12
+                    }
+                },
+
+                leaves: {
+                    label: {
+                        normal: {
+                            position: 'right',
+                            verticalAlign: 'middle',
+                            align: 'left'
+                        }
+                    }
+                },
+
+                expandAndCollapse: true,
+                animationDuration: 250,
+                animationDurationUpdate: 550
+            }
+        ]
+    });
+    myChart.on('click',function(){
+      let allNode=0;
+      let nodes=myChart._chartsViews[0]._data._graphicEls;
+        for(let i=0,count =nodes.length;i<count;i++){
+            let node=nodes[i];
+            if(node===undefined)
+                continue;
+                allNode++;
+            }
+      let height=window.innerHeight;
+      let currentHeight=20*allNode;
+      let newWidth=Math.max(currentHeight,height);
+
+          container.style.width = window.innerWidth + 'px';
+          container.style.height = newWidth + 'px';
+          myChart.resize();
+
+    })
+    </script>
+</body>
+
+</html>
+
+
+
+
+

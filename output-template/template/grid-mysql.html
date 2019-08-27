@@ -1,0 +1,59 @@
+<style type="text/css">
+  table.gridtable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+    width:50%;
+  }
+  table.gridtable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+  }
+  table.gridtable td {
+    text-align: left;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+  }
+</style>
+<h3>{{ d.table_title }}</h3>
+<table id="{{d.table_id}}" class="gridtable">
+{{# let headLen}}
+{{# if(d.table_head){ headLen=d.table_head.length;}}
+  <thead>
+    <tr>
+    <th>序号</th>
+    {{# for(let i = 0, len = d.table_head.length; i < len; i++){ }}
+      <th>{{ d.table_head[i] }}</th>
+    {{# } }}
+    </tr>
+  </thead>
+{{# } else { headLen=d.table_col.length; }}
+  <thead>
+    <tr>
+    <th>序号</th>
+    {{# for(let i = 0, len = d.table_col.length; i < len; i++){ }}
+      <th>{{ d.table_col[i] }}</th>
+    {{# } }}
+    </tr>
+  </thead>
+{{# } }}
+  <tbody>
+    {{# for(let i = 0, len = d.table_list.length; i < len; i++){ }}
+      <tr>
+          <td>{{i+1}}</td>
+        {{# for(let k = 0, len1 = headLen; k < len1; k++){ }}
+          <td>{{ d.table_list[i][d.table_col[k]]||'' }}</td>
+        {{# } }}
+      </tr>
+    {{# } }}
+  </tbody>
+</table>

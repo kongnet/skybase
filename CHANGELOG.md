@@ -1,3 +1,12 @@
+## [0.1.46](https://github.com/kongnet/skybase/compare/v0.1.45...v0.1.46) (2019-08-27)
+
+
+### :memo:
+
+* 修改说明文档，增加Changelog.md ([fb4708b](https://github.com/kongnet/skybase/commit/fb4708b))
+
+
+
 ## [0.1.45](https://github.com/kongnet/skybase/compare/v0.1.44...v0.1.45) (2019-08-27)
 
 
