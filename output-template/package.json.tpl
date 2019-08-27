@@ -4,6 +4,7 @@
   "description": "{{d.proDesc}}",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "cz": "git add . && git status && git cz"
   },

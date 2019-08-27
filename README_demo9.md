@@ -16,17 +16,18 @@
     3. 运行demo9,npm run demo9，启动数据库探针
     4. 最终效果
         ![最终效果](demo_img/treemap.gif)
-  - 方式二
+  - 方式二（推荐方式）
+    * 1. 使用skyjt安装skybase，项目地址： [skyjt](https://github.com/kongnet/sky)
+    * 2. 安装 npm i -g skyjt
+    * 3. 创建新的文件夹，cd 进入，执行
+    * 4. jt init -f // 强制初始化
 
-    1. 项目地址： [skyjt](https://github.com/kongnet/sky)
-    2. 安装 npm i -g skyjt
-    3. 创建新的文件夹，cd 进入，执行
-        - jt init -f
-        ![init](demo_img/init.gif)
-    4. cd 进test，执行 npm i，
-    5. 安装全局nodemon,npm i -g nodemon.
-    6. 执行 node index
-    7. 最终效果同方法一
+    ![init](demo_img/init.gif)
+
+    * 5. cd进创建的目录，执行 **npm i** or **yarn** or **cnpm i**// 安装依赖包
+    * 6. 安装全局nodemon, npm i -g nodemon.
+    * 7. 执行 **nodemon** or **npm start** or **node index**
+    * 8. 最终效果同方法一 // 数据库探针需要修改 **./config/config.default.js** 中 **mysql** 的配置
   - 注意
 
       请确认数据库链接正常，且有一定的数据.
