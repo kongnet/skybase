@@ -11,9 +11,9 @@
     "url": "https://github.com/kongnet/skybase.git"
   },
   "scripts": {
+    "cz": "conventional-changelog -p atom -i CHANGELOG.md -s -r 0 && git add . && git status && git cz",
+    "push": "npm version patch && npm publish . && git push",
     "test": "nyc --reporter=html mocha ./tests/*.js",
-    "patch": "git add . && git commit -m:pencil2: && npm version patch && npm publish .",
-    "cz": "git add . && git status && git cz && npm version patch && npm publish .",
     "demo1": "nodemon demo/1-simple/index.js",
     "demo2": "nodemon demo/2-api-register/index.js",
     "demo3": "nodemon demo/3-full-module/index.js",
@@ -38,7 +38,7 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
-    "meeko": "^1.7.100",
+    "meeko": "^1.8.6",
     "mockjs": "^1.0.1-beta3",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
@@ -48,6 +48,7 @@
     "babel-eslint": "^10.0.2",
     "cc-jt": "^0.1.21",
     "co-mocha": "^1.2.2",
+    "conventional-changelog": "^3.1.10",
     "cz-jt": "^0.1.7",
     "eslint": "^6.1.0",
     "eslint-plugin-html": "^6.0.0",
