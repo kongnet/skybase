@@ -83,12 +83,13 @@ async function getDbTableColumn () {
   r = await db.cmd(columnSql).run()
   r = r.map(it => {
     // console.log(dbTableCommentMap[it.db_name + '$$' + it.table_name])
+    let emptyStr = it.column_name.includes('id') ? 'id' : ''
     return {
       dbName: it.db_name,
-      tableName: it.table_name + ' ' + dbTableCommentMap[it.db_name + '$$' + it.table_name],
+      tableName: it.table_name + ' ' + (dbTableCommentMap[it.db_name + '$$' + it.table_name] || '<font style="color:red">【无注解】</font>'),
       columnName: it.column_name,
       columnKey: it.column_key, // PRI->UNI->MUL
-      columnComment: it.column_comment
+      columnComment: it.column_comment || emptyStr || '<font style="color:red">【空】</font>'
     }
   })
   return {
