@@ -1,3 +1,12 @@
+## [0.1.47](https://github.com/kongnet/skybase/compare/v0.1.46...v0.1.47) (2019-08-27)
+
+
+### :sparkles:
+
+* skyjt init 模板中增加 mock 例子 ([c417d8e](https://github.com/kongnet/skybase/commit/c417d8e))
+
+
+
 ## [0.1.46](https://github.com/kongnet/skybase/compare/v0.1.45...v0.1.46) (2019-08-27)
 
 
