@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./tests/*.js",
+    'testapi': "node ./tool/scanNoParam.js",
     "cz": "git add . && git status && git cz"
   },
   "author": "",
@@ -21,6 +22,9 @@
     "meeko": "*",
     "standard": "^12.0.1"
   },
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
     "config": {
     "commitizen": {
       "path": "./node_modules/cz-jt"

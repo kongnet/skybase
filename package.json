@@ -49,7 +49,7 @@
     "cc-jt": "^0.1.21",
     "co-mocha": "^1.2.2",
     "conventional-changelog": "^3.1.10",
-    "cz-jt": "^0.1.7",
+    "cz-jt": "^0.1.11",
     "eslint": "^6.1.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-vue": "^5.2.3",

@@ -1,3 +1,12 @@
+## [0.1.48](https://github.com/kongnet/skybase/compare/v0.1.47...v0.1.48) (2019-08-30)
+
+
+### :sparkles:
+
+* 表和字段除id外，没有注解标注 ([45b0b49](https://github.com/kongnet/skybase/commit/45b0b49))
+
+
+
 ## [0.1.47](https://github.com/kongnet/skybase/compare/v0.1.46...v0.1.47) (2019-08-27)
 
 
