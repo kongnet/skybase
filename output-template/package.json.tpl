@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "test": "mocha ./tests/*.js",
-    'testapi': "node ./tool/scanNoParam.js",
+    "testapi": "node ./tool/scanNoParam.js",
     "cz": "git add . && git status && git cz"
   },
   "author": "",

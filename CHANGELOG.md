@@ -1,3 +1,12 @@
+## [0.1.49](https://github.com/kongnet/skybase/compare/v0.1.48...v0.1.49) (2019-09-05)
+
+
+### :sparkles:
+
+* 增加api无参数提交测试 ([7ca8020](https://github.com/kongnet/skybase/commit/7ca8020))
+
+
+
 ## [0.1.48](https://github.com/kongnet/skybase/compare/v0.1.47...v0.1.48) (2019-08-30)
 
 
