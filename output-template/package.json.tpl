@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "mocha": "^6.2.0"
-  }
+  },
     "config": {
     "commitizen": {
       "path": "./node_modules/cz-jt"
