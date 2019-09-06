@@ -1,3 +1,12 @@
+## [0.1.52](https://github.com/kongnet/skybase/compare/v0.1.51...v0.1.52) (2019-09-06)
+
+
+### :fire:
+
+* 去除模板目录放到git仓库 ([905473f](https://github.com/kongnet/skybase/commit/905473f))
+
+
+
 ## [0.1.51](https://github.com/kongnet/skybase/compare/v0.1.50...v0.1.51) (2019-09-05)
 
 
