@@ -25,7 +25,7 @@ let config = {}
 try {
   config = require('./config.' + env)
 } catch (e) {
-  console.log($.c.y(`⚠️ 【普通错误】${env}配置文件缺失，将使用default配置`))
+  console.log($.c.y(`😵 【普通错误】${env}配置文件缺失，将使用default配置`))
 }
 $.option.logTime = 0
 $.log(`   NODE_ENV:${$.c.g(` ${env}  `)}`)

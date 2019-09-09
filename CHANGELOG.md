@@ -1,3 +1,12 @@
+## [0.1.54](https://github.com/kongnet/skybase/compare/v0.1.53...v0.1.54) (2019-09-09)
+
+
+### :ambulance:
+
+* 一些调整和参数修复 ([fe1c3cd](https://github.com/kongnet/skybase/commit/fe1c3cd))
+
+
+
 ## [0.1.53](https://github.com/kongnet/skybase/compare/v0.1.52...v0.1.53) (2019-09-06)
 
 
