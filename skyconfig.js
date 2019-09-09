@@ -87,6 +87,7 @@ module.exports = {
    * ps. 一定要在中间件中使用next，否则后续的中间件将不会执行
    *
    * 框架自带的中间件：
+   *  0 用户自定义中间件后，执行顺序，按照用户配置定，如果找不到，会从skybase/lib/middleware查找
    * cors --- 跨域允许
    * bodyParse --- 解析body，可以解析各种方式的body，甚至可以接收文件
    * staticServer --- 静态文件服务器，一般是开发环境需要，生产环境的前端一般不会让后端代理
@@ -101,7 +102,7 @@ module.exports = {
     'sky-body-parse',
     'sky-static-server',
     'sky-check-param',
-    'sky-check-token',
+    'sky-check-token', // 自己实现的token 可以替换这个
     'sky-output',
     'sky-api-register'
   ],

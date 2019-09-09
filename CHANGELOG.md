@@ -1,3 +1,12 @@
+## [0.1.53](https://github.com/kongnet/skybase/compare/v0.1.52...v0.1.53) (2019-09-06)
+
+
+### :zap:
+
+* 调试打印增加header信息 ([1d1706d](https://github.com/kongnet/skybase/commit/1d1706d))
+
+
+
 ## [0.1.52](https://github.com/kongnet/skybase/compare/v0.1.51...v0.1.52) (2019-09-06)
 
 
