@@ -39,7 +39,8 @@ async function start () {
   $.log(`listening queue: ${queueName}`)
 }
 
-before().then(start).catch(async (err) => {
-  console.error('致命错误', err.stack)
-  process.exit(1)
-})
+before().then(start)
+  ['catch'](async (err) => {
+    console.error('致命错误', err.stack)
+    process.exit(1)
+  })

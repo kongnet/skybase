@@ -19,6 +19,7 @@ module.exports = {
    *
    * 如果不填，或者转为布尔值为false，则使用 process.mainModule.filename 的路径，即本node应用的入口文件
    * */
+
   rootDir: path.dirname(process.mainModule.filename),
 
   /**

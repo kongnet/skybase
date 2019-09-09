@@ -7,6 +7,7 @@ config.beforeMount = async () => {
   const db = require('j2sql')(config.mysql)
   await $.tools.waitNotEmpty(db, '_mysql')
   global.db = db
+
   /*
   // 连接mysql主
   const dbMain = require('j2sql')(config.mysqlMain)
@@ -28,6 +29,7 @@ config.beforeMount = async () => {
 
   // 连接kafka
   global.Kafka = await createKafka(config.kafka) */
+
 }
 
 sky.start(config, async () => {

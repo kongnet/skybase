@@ -9,13 +9,14 @@ $.option.logTime = false
 /**
  * 给MQ加一些必须的监听器，包括处理重新连接的逻辑
  * */
+
 const addListener = (mq, conf, onReconnected) => {
   mq.on('close', async (e) => {
     // 启动后，断开了连接
     $.err($.c.r('✘'), `-x- rabbitMQ [${$.c.y(`${conf.hostname} : ${conf.port}`)}] close...`)
     $.err(e.message)
 
-    if(onReconnected){
+    if (onReconnected) {
       const MQ = await createAmqp(conf, onReconnected)
       $.log($.c.g('✔'), `rabbitMQ [${$.c.y(`${conf.hostname} : ${conf.port}`)}]`)
       onReconnected && onReconnected(MQ)
@@ -36,6 +37,7 @@ const addListener = (mq, conf, onReconnected) => {
  *
  * @return {Promise<ChannelModel>}
  * */
+
 const createAmqp = async (conf, onReconnected) => {
   const option = {
     protocol: conf.protocol,
@@ -50,7 +52,7 @@ const createAmqp = async (conf, onReconnected) => {
   }
 
   let err = false
-  do{
+  do {
     try {
       const MQ = await amqp.connect(option)
       addListener(MQ, option, onReconnected)
