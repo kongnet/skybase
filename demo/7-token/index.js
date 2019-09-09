@@ -1,7 +1,7 @@
 const sky = require('../../index')
 const config = require('./config')
 const $ = require('meeko')
-const Config = require('../../config.js')
+const Config = require('../../skyconfig.js')
 
 const createIoredis = require('../../sky-module/create_ioredis')
 

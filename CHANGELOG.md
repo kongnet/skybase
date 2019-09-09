@@ -1,3 +1,31 @@
+## [0.1.51](https://github.com/kongnet/skybase/compare/v0.1.50...v0.1.51) (2019-09-05)
+
+
+
+
+## [0.1.50](https://github.com/kongnet/skybase/compare/v0.1.49...v0.1.50) (2019-09-05)
+
+
+
+
+## [0.1.49](https://github.com/kongnet/skybase/compare/v0.1.48...v0.1.49) (2019-09-05)
+
+
+### :sparkles:
+
+* 增加api无参数提交测试 ([7ca8020](https://github.com/kongnet/skybase/commit/7ca8020))
+
+
+
+## [0.1.48](https://github.com/kongnet/skybase/compare/v0.1.47...v0.1.48) (2019-08-30)
+
+
+### :sparkles:
+
+* 表和字段除id外，没有注解标注 ([45b0b49](https://github.com/kongnet/skybase/commit/45b0b49))
+
+
+
 ## [0.1.47](https://github.com/kongnet/skybase/compare/v0.1.46...v0.1.47) (2019-08-27)
 
 
