@@ -1,3 +1,12 @@
+## [0.1.57](https://github.com/kongnet/skybase/compare/v0.1.56...v0.1.57) (2019-09-18)
+
+
+### :bug:
+
+* 创建中间暴露到index，修复controller出错时候的信息 ([8c00a07](https://github.com/kongnet/skybase/commit/8c00a07))
+
+
+
 ## [0.1.56](https://github.com/kongnet/skybase/compare/v0.1.55...v0.1.56) (2019-09-09)
 
 
