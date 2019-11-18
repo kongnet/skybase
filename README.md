@@ -147,8 +147,16 @@ skybase框架的api定义功能主要有以下几点：
 1. 指定api所需参数，会自动校验参数是否符合设定
 2. 输出api接口文档，前端同学可直观查看
 3. 指定接口的访问权限。如是否登录，是否签名，登录者是否拥有指定权限
-
-
+### param中的type类型说明
+* int 整形
+* positive/negative 正数/负数
+* string 字符型
+* datetime 可以被Date.parse的 'YYYY-MM-DD hh:mm:ss'
+* enum 数组，并要求提交的参数包含在，数组列表中
+* bool bool型
+* number 数值型
+* array 数组型，用得少，可以为它配置items的类型： arrayParam1:{type:'array',items:{type:'string'}}
+### 案例
     module.exports = {
       __swagger__: { // 用于把此文件内的接口归为同一组的组名
         name: '文章库-文章管理',
