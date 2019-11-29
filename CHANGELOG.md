@@ -1,3 +1,8 @@
+## [0.1.61](https://github.com/kongnet/skybase/compare/v0.1.60...v0.1.61) (2019-11-18)
+
+
+
+
 ## [0.1.60](https://github.com/kongnet/skybase/compare/v0.1.59...v0.1.60) (2019-09-23)
 
 
