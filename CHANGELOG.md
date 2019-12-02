@@ -1,3 +1,12 @@
+## [0.1.62](https://github.com/kongnet/skybase/compare/v0.1.61...v0.1.62) (2019-11-29)
+
+
+### :memo:
+
+* 简单的实践文档 ([cf0ceaf](https://github.com/kongnet/skybase/commit/cf0ceaf5f8ac61e5ef7cf1997a4935b6b0eb90de))
+
+
+
 ## [0.1.61](https://github.com/kongnet/skybase/compare/v0.1.60...v0.1.61) (2019-11-18)
 
 

@@ -94,17 +94,126 @@
 * 通过对上面文件结构的理解，自行查看
 
 #### 小结
-1.首先增加api定义
-2.是mock接口就直接，在定义的mock字段中增加，controller为空字符串
-3.不是mock接口就指明controller字符串，并在router中增加相应的，文件和方法
-4.复杂业务就放到service中，router文件中 ，引用使用
+* 1.首先增加api定义
+* 2.是mock接口就直接，在定义的mock字段中增加，controller为空字符串
+* 3.不是mock接口就指明controller字符串，并在router中增加相应的，文件和方法
+* 4.复杂业务就放到service中，router文件中 ，引用使用
 
+### 理解API定义（参数检查，表单验证。。）
+> 大部分的时候我们对提交的参数会有限制，我们将各类限制的规则提取出来，并与API的定义组合形成一套skybase的api定义json格式
+
+#### api定义文件
+* 打开 ./model/api/skyapi/sky-stat.js
+* 看getOne，这是一个获取统计系统中某个特定键值序列的接口
+```javascript
+'getOne': { // 接口的属性
+    name: '获取单个统计', // 接口名称
+    desc: '获取指定api 5m 24个点，1h 24个点,1d 30个点',// 接口详细说明
+    method: 'get, // 提交的方式 get post all-get/post 
+    controller: 'sky-stat/stat.getOne', // 控制器，router方法所在的文件位置
+    param: { // 参数
+      api: { // 参数名
+        name: 'api名称',
+        desc: '指定api名称  例： _test',
+        req: 1, // 是否必填，0或者不写或null，忽略必填
+        def: null, // 是否有默认值，null或者不写，没有默认值，注意如果数值型 输入为0 还是 0
+        type: 'string'// 参数的类型 int positive negative string 
+        // datetime YYYY-MM-DD hh:mm:ss 
+        // enum是个数组 具体指写在size属性中size:[1,2,3] or size:['open'，'close'],type:enum 
+        // bool number array不常用
+      },
+      type: {// 这是另一个参数
+        name: '输出类型 [api-输出输出 mix-html输出 chart-html只有图表]',
+        desc: '直接输出html界面',
+        req: 0,
+        def: 'api',
+        type: 'string'
+      }
+    },
+    'token': false,
+    'needSign': false,
+    'err_code': {},
+    'test': {},
+    'front': true
+  }
+```
+* controller: 'sky-stat/stat.getOne'，表示router对应的文件 是 ./router/sky-stat/stat.js 中的 getOne方法
+* name 接口名称，desc 注明接口详情，此属性会在之后的生成api文档清晰说明接口定义
+* api定义后，访问如果不满足条件，将会被挡在router处理层外
+* 打开./router/sky-stat/stat.js ,查看 getOne方法
+* const r = await skyapiService.getOne(ctx.checkedData.data) 其中 ctx.checkedData.data 如果通过即为已经被api规则通过的 结果，不通过，router层之前返回错误
+
+#### api定义文件生成
+* ./tools/api2swagger.js 每次CI时 将遍历api定义，转成swaager格式的json形式，可以导入postman进行操作。默认生成目录在 ./www/swagger
+* ./tools/api2markdown.js 每次CI是 将遍历api定义，生成api说明文档。默认生成目录在 ./www/markdown
+#### 小结
+* api定义，包括mock定义，有全栈研发发起，快速分解需求的方式，和产品说定义具体实现，由你来
+* api的规则被定义在 meeko 组件npm i  meeko 的meeko.tools.checkParam，因为历史原因，这是一个写的并不好的函数，但有足够的代码覆盖率 
 ### 复杂例子
-* http://127.0.0.1:13000/skyapi/probe/mysql  // 查看探针例子 这里treemap的例子可能会出不来，是因为 地图的key是个人的，过期的原因 ./template/treemap-mysql.html
+> 最终实现业务逻辑，离不开mysql redis mq等操作
+> http://127.0.0.1:13000/skyapi/probe/mysql  // 查看探针例子 这里treemap的例子可能会出不来，是因为 地图的key是个人的，过期的原因 ./template/treemap-mysql.html
+> 如果直接看不懂，我们之后回过头来再看![](https://raw.githubusercontent.com/kongnet/skybase/master/screenShot/demo9.png)
 
 #### mysql操作
+##### 概述
+* npm i j2sql2 安装skybase配套的mysql操作组件
+* j2sql2 设计核心是为了，可以简单操作mysql 并 可以表的操作进行一些统一的扩展而设计的
+* 打开 ./index_stat.js 看 9-13行
+```javascript
+  const skyDB = new SkyDB({ mysql: config.mysql, redis: config.redis })
+  const db = await skyDB.mysql // 创建mysql实例
+  const rd = await skyDB.redis // 创建redis 实例
+  global.db = db
+  global.redis = rd
+```
+* skyDB整合了mysql的加载和redis的加载,如果mysql没有连接会报错，如果mysql数据库的表为0 也会报错，具体的配置 查看 ./config/config.**您的环境 or default**.js ，兼容node-mysql
+##### j2sql  和 j2sql2的关系
+* j2sql带有 genrator yield 操作的兼容 j2sql2 直接 promise await模式并合并了redis操作
+##### j2sql2基本操作
+* db是一个skyDB.mysql的实例
+* db.**表名**.[C or U or R or D](对应的操作) 
+* https://github.com/kongnet/j2sql/tree/master/tests  j2sql的测试用例，j2sql2 操作同j2sql
+* 如果想更快捷，使用  await db.cmd(**sqlStr**) sqlStr强烈建议 使用 preSql模式，防止注入
+```javascript
+console.log('sql算式', await db.run('select ?+? as sum', [3, 2])) // 建议使用方式 db.run(preSQL模式)
+```
+* 使用 db.**表名**.[C or U or R or D] 操作模式，如果表名，列名 不存在，会直接报错而不进行IO操作
+* db.**表名**.ex.[list({}) page({}) getById(n) 。。。] 对表对象扩展了 可打印 db.表名.ex查看
+##### mysql复杂操作
+* 请使用 await db.cmd(sqlStr).run() [兼容j2sql] or  await db.run(sqlStr)
 #### redis操作
-  
+##### 概述
+* io-redis封装，支持所有io-redis 可支持的操作
+```javascript
+    const rd = await skyDB.redis // 创建redis 实例
+    console.log('check key off', rd.keysLimit.add('*')) // 关闭redis检验,或者配置Config.redis
+    console.log('设置j2sql2_test', await rd.set('j2sql2_test', '1'))
+    console.log('获取j2sql2_test', await rd.get('j2sql2_test'))
+    console.log('删除j2sql2_test', await rd.del('j2sql2_test'))
+    console.log('获取j2sql2_test', await rd.get('j2sql2_test'))
+```
+* 以上代码在 async 函数中 运行
+* 例子查看 https://github.com/kongnet/j2sql2/blob/master/sample.js
+##### redis键值的控制
+> 在开发时因为有很多的key-value对，容易遗忘，因此j2sql2 扩展了redis的限制
 
-  
+*在config redis字段中 增加 
+* keyLimit: ['x1', 'c*'] //
+```javascript
+const redisObj = {
+  host: '127.0.0.1',
+  port: 32769,
+  auth: '',
+  db: 0,
+  // 如果有此字段就会对，有key的操作的命令进行过滤,排序后判断，有限先满足带*号的规则，再满足普通规则
+  keyLimit: ['x1', 'c*'] // '*' 全部允许
+}
+```
+
+*  rd.keysLimit.add('*') 关闭所有限制
+* rd.keysLimit.status = 1 or rd.keysLimit.del('*') 打开 限制
+* 打开后 await rd.get('k1') **报错**  
+
+
+
   
