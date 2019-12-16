@@ -11,7 +11,8 @@
 - npm i -g yarn // 全局安装 另一个包管理模块
 - npm i -g nodemon // 全局安装后端调试工具
 - npm i -g skyjt //jt 命令行工具
-- jt init // 初始化一个 skybase 项目 -f 强制覆盖已有目录 ，根据提示完成
+- jt init -f  // 初始化一个 skybase 项目 -f 强制覆盖已有目录 ，根据提示完成
+  
   > 以上完成对 skybase 的一个模板例子的拉取并初始化，完成后会带有几个基础例子，方便入门
 
 ## 配置
@@ -108,13 +109,20 @@
 
 - http://127.0.0.1:13000/skyapi/mock/img?size=100x100 // 返回占位符互补色例子
 - 通过对上面文件结构的理解，自行查看
-
+#### 文件上传
+> 项目中一般都有文件上传
+- 打开model/api/upload.js, api定义type:file。 size数组代表最大最小长度单位byte。 fileType数组，mime形式的允许上传文件
+- 对应./router/mock/upload.js，69行demo函数，引用uploadRule中的demo规则，这边allowType和size写死了，也可以联动到api定义中。
+- 注意：api定义中是fileType，router中是allowType，历史原因
+- path是相对upload上传目录的目录，例子中是 demo
+- nameRule是每次上传的文件名称，一般由分类+时间+随机组成，例子中是18位长的随机字符串
 #### 小结
 
 - 1.首先增加 api 定义
 - 2.是 mock 接口就直接，在定义的 mock 字段中增加，controller 为空字符串
 - 3.不是 mock 接口就指明 controller 字符串，并在 router 中增加相应的，文件和方法
 - 4.复杂业务就放到 service 中，router 文件中 ，引用使用
+- 5.文件上传
 
 ### 理解 API 定义（参数检查，表单验证。。）
 
@@ -132,23 +140,25 @@
     method: 'get, // 提交的方式 get post all-get/post
     controller: 'sky-stat/stat.getOne', // 控制器，router方法所在的文件位置
     param: { // 参数
-      api: { // 参数名
-        name: 'api名称',
-        desc: '指定api名称  例： _test',
-        req: 1, // 是否必填，0或者不写或null，忽略必填
-        def: null, // 是否有默认值，null或者不写，没有默认值，注意如果数值型 输入为0 还是 0
-        type: 'string'// 参数的类型 int positive negative file文件 string
+        api: { // 参数名
+          name: 'api名称',
+          desc: '指定api名称  例： _test',
+          req: 1, // 是否必填，0或者不写或null，忽略必填
+          def: null, // 是否有默认值，null或者不写，没有默认值，注意如果数值型 输入为0 还是 0
+          type: 'string'
+        // 参数的类型 int positive negative file文件 string
         // datetime YYYY-MM-DD hh:mm:ss
         // enum是个数组 具体指写在size属性中size:[1,2,3] or size:['open'，'close'],type:enum
+        // file类型 有size允许文件长度，fileType允许文件类型，2者都是数组形式
         // bool number array不常用
-      },
-      type: {// 这是另一个参数
-        name: '输出类型 [api-输出输出 mix-html输出 chart-html只有图表]',
-        desc: '直接输出html界面',
-        req: 0,
-        def: 'api',
-        type: 'string'
-      }
+        },
+        type: {// 这是另一个参数
+          name: '输出类型 [api-输出输出 mix-html输出 chart-html只有图表]',
+          desc: '直接输出html界面',
+          req: 0,
+          def: 'api',
+          type: 'string'
+        }
     },
     'token': false,
     'needSign': false,
