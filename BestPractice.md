@@ -22,7 +22,7 @@
 
   > 以上操作会保持最新的 skybase 和 meeko 基础库
 
-- 打开 congig 目录，目录中包括各个环境的配置文件，以及一个 default 的默认文件，在无法确认环境变量 NODE_ENV 时，会取这个文件配置
+- 打开 config 目录，目录中包括各个环境的配置文件，以及一个 default 的默认文件，在无法确认环境变量 NODE_ENV 时，会取这个文件配置
 - 打开 config.default.js 修改 mysql 配置 和 redis 配置，用户名、密码、默认数据库。可使用 docker 安装此 2 个服务
 - 命令行回到项目根目录 cd ..
 - nodemon // 启动默认例子
@@ -61,10 +61,11 @@
 - api 定义的名字 同最终的访问路径关系有 2 种，类似上面的 first 接口，因为在 api/skyapi/mock.js 中 所以路径最终为域名**/skyapi/api 文件名/属性名**。 另 1 种 是 ‘/first’:{} 带有 **‘/’** 作为属性开头，那就是绝对地址，**域名/first**访问
 - 完成此功能需要有 model/api/mock.js （mock api 配置文件）
 
-#### 最简单的 api 例子
+#### 简单API
+
+##### 最简单的 api 例子
 
 - 打开查看 model/api/mock.js ,getEmpty 属性
-
 ```javascript
   getEmpty: {
     name: 'getEmpty',
@@ -78,46 +79,48 @@
     front: true
   }
 ```
-
 - 命令行 nodemon 或者 已启动 不用再运行
 - http://127.0.0.1:13000/skyapi/mock/getEmpty // 最简单的 api 例子
 
-#### 返回 html 页面的 api
-
+##### 返回 html 页面的 api
 - 打开查看 model/api/mock.js ,**getHtml**属性
 - 对应./router/mock/easy.js 中的**getHtml**方法，注意有 ctx.type='html' mime 值设置
 - 同上操作
 - http://127.0.0.1:13000/skyapi/mock/getHtml // 查看 mock 例子
 
-#### 获取一个网页内容，并返回在一个 html 页面的 pre 标签中
-
+##### 获取一个网页内容，并返回在一个 html 页面的 pre 标签中
 - 打开查看 model/api/mock.js ,**getUrl**属性
 - param:{url:{...}} 此处拥有一个 url 的参数，设置默认值 def 为'http://www.baidu.com'
 - 对应./router/mock/easy.js 中的**getUrl**方法，注意有 await req(url)
 - 同上操作
 - http://127.0.0.1:13000/skyapi/mock/getUrl?url=http://www.baidu.com // 获取 url 代码和内容，不提交 url 参数，默认拉取 baidu 首页
 
-#### 通过 api 获取 bing 的今日背景图
-
+##### 通过 api 获取 bing 的今日背景图
 - 打开查看 model/api/mock.js ,**getBing**属性
 - param 无参数
 - 对应./router/mock/easy.js 中的**getBing**方法，注意有 await req(..)
 - 直接获取 bing api，解析 json 结构后 返回到一个 嵌入一个 img 标签的 html 页面
 - http://127.0.0.1:13000/skyapi/mock/getBing // 获取 bing 最新的背景图
 
-#### 通过 api 返回一个 图片占位符，mock 中常用到
-
+##### 通过 api 返回一个 图片占位符，mock 中常用到
 - http://127.0.0.1:13000/skyapi/mock/img?size=100x100 // 返回占位符互补色例子
 - 通过对上面文件结构的理解，自行查看
-#### 文件上传
+
+##### 通过 api 返回一个 验证码，但要注意写入一个超时，限制验证码时效
+- http://127.0.0.1:13000/skyapi/mock/captcha 
+- 通过对上面文件结构的理解，自行查看
+
+#### 复杂API
+
+##### 文件上传
 > 项目中一般都有文件上传
-- 打开model/api/upload.js, api定义type:file。 size数组代表最大最小长度单位byte。 fileType数组，mime形式的允许上传文件
+- 打开model/api/mock.js, 找到upload属性，api定义type:file。 size数组代表最大最小长度单位byte。 fileType数组，mime形式的允许上传文件
 - 对应./router/mock/upload.js，69行demo函数，引用uploadRule中的demo规则，这边allowType和size写死了，也可以联动到api定义中。
 - 注意：api定义中是fileType，router中是allowType，历史原因
 - path是相对upload上传目录的目录，例子中是 demo
 - nameRule是每次上传的文件名称，一般由分类+时间+随机组成，例子中是18位长的随机字符串
-#### 小结
 
+#### 小结
 - 1.首先增加 api 定义
 - 2.是 mock 接口就直接，在定义的 mock 字段中增加，controller 为空字符串
 - 3.不是 mock 接口就指明 controller 字符串，并在 router 中增加相应的，文件和方法
