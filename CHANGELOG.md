@@ -1,3 +1,12 @@
+## [0.1.66](https://github.com/kongnet/skybase/compare/v0.1.65...v0.1.66) (2019-12-16)
+
+
+### :memo:
+
+* 修改上传文件说明 ([9f94e21](https://github.com/kongnet/skybase/commit/9f94e2100ae8e4d2bce614395b1762937d117d9d))
+
+
+
 ## [0.1.65](https://github.com/kongnet/skybase/compare/v0.1.64...v0.1.65) (2019-12-16)
 
 
