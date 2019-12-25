@@ -1,3 +1,102 @@
+## [0.1.66](https://github.com/kongnet/skybase/compare/v0.1.65...v0.1.66) (2019-12-16)
+
+
+### :memo:
+
+* 修改上传文件说明 ([9f94e21](https://github.com/kongnet/skybase/commit/9f94e2100ae8e4d2bce614395b1762937d117d9d))
+
+
+
+## [0.1.65](https://github.com/kongnet/skybase/compare/v0.1.64...v0.1.65) (2019-12-16)
+
+
+
+
+## [0.1.64](https://github.com/kongnet/skybase/compare/v0.1.63...v0.1.64) (2019-12-14)
+
+
+
+
+## [0.1.63](https://github.com/kongnet/skybase/compare/v0.1.62...v0.1.63) (2019-12-02)
+
+
+
+
+## [0.1.62](https://github.com/kongnet/skybase/compare/v0.1.61...v0.1.62) (2019-11-29)
+
+
+### :memo:
+
+* 简单的实践文档 ([cf0ceaf](https://github.com/kongnet/skybase/commit/cf0ceaf5f8ac61e5ef7cf1997a4935b6b0eb90de))
+
+
+
+## [0.1.61](https://github.com/kongnet/skybase/compare/v0.1.60...v0.1.61) (2019-11-18)
+
+
+
+
+## [0.1.60](https://github.com/kongnet/skybase/compare/v0.1.59...v0.1.60) (2019-09-23)
+
+
+
+
+## [0.1.59](https://github.com/kongnet/skybase/compare/v0.1.58...v0.1.59) (2019-09-23)
+
+
+
+
+## [0.1.58](https://github.com/kongnet/skybase/compare/v0.1.57...v0.1.58) (2019-09-19)
+
+
+
+
+## [0.1.57](https://github.com/kongnet/skybase/compare/v0.1.56...v0.1.57) (2019-09-18)
+
+
+### :bug:
+
+* 创建中间暴露到index，修复controller出错时候的信息 ([8c00a07](https://github.com/kongnet/skybase/commit/8c00a07f3ed6c0549ee2db84c3f42d0e542429e7))
+
+
+
+## [0.1.56](https://github.com/kongnet/skybase/compare/v0.1.55...v0.1.56) (2019-09-09)
+
+
+
+
+## [0.1.55](https://github.com/kongnet/skybase/compare/v0.1.54...v0.1.55) (2019-09-09)
+
+
+
+
+## [0.1.54](https://github.com/kongnet/skybase/compare/v0.1.53...v0.1.54) (2019-09-09)
+
+
+### :ambulance:
+
+* 一些调整和参数修复 ([fe1c3cd](https://github.com/kongnet/skybase/commit/fe1c3cdcd8fe9837026ac5b324b46b708e498d51))
+
+
+
+## [0.1.53](https://github.com/kongnet/skybase/compare/v0.1.52...v0.1.53) (2019-09-06)
+
+
+### :zap:
+
+* 调试打印增加header信息 ([1d1706d](https://github.com/kongnet/skybase/commit/1d1706d3b3fdeddd27a7fd77c7e8ffe647bc90e8))
+
+
+
+## [0.1.52](https://github.com/kongnet/skybase/compare/v0.1.51...v0.1.52) (2019-09-06)
+
+
+### :fire:
+
+* 去除模板目录放到git仓库 ([905473f](https://github.com/kongnet/skybase/commit/905473f429919302c590185157683d0e276a00f5))
+
+
+
 ## [0.1.51](https://github.com/kongnet/skybase/compare/v0.1.50...v0.1.51) (2019-09-05)
 
 
@@ -13,7 +112,7 @@
 
 ### :sparkles:
 
-* 增加api无参数提交测试 ([7ca8020](https://github.com/kongnet/skybase/commit/7ca8020))
+* 增加api无参数提交测试 ([7ca8020](https://github.com/kongnet/skybase/commit/7ca80203772b356f0005b0dae7f238f7a800715b))
 
 
 
@@ -22,7 +121,7 @@
 
 ### :sparkles:
 
-* 表和字段除id外，没有注解标注 ([45b0b49](https://github.com/kongnet/skybase/commit/45b0b49))
+* 表和字段除id外，没有注解标注 ([45b0b49](https://github.com/kongnet/skybase/commit/45b0b493f8d7754d13b76e11d9c5447ec07c1955))
 
 
 
@@ -31,7 +130,7 @@
 
 ### :sparkles:
 
-* skyjt init 模板中增加 mock 例子 ([c417d8e](https://github.com/kongnet/skybase/commit/c417d8e))
+* skyjt init 模板中增加 mock 例子 ([c417d8e](https://github.com/kongnet/skybase/commit/c417d8e79ef18aa72db85e8d1ffbfea330ed256d))
 
 
 
@@ -40,7 +139,7 @@
 
 ### :memo:
 
-* 修改说明文档，增加Changelog.md ([fb4708b](https://github.com/kongnet/skybase/commit/fb4708b))
+* 修改说明文档，增加Changelog.md ([fb4708b](https://github.com/kongnet/skybase/commit/fb4708bc445a1cde593668edf094aeefbe665543))
 
 
 
@@ -49,7 +148,7 @@
 
 ### :memo:
 
-* 修改创建项目的帮助文档 ([73154d8](https://github.com/kongnet/skybase/commit/73154d8))
+* 修改创建项目的帮助文档 ([73154d8](https://github.com/kongnet/skybase/commit/73154d89b33d039a45401b7ab64ccb9451f1e119))
 
 
 
@@ -58,7 +157,7 @@
 
 ### :sparkles:
 
-* mysql tree ([acf3e2c](https://github.com/kongnet/skybase/commit/acf3e2c))
+* mysql tree ([acf3e2c](https://github.com/kongnet/skybase/commit/acf3e2cdfe9ff27bb047f36f1362775e64ca35ac))
 
 
 
@@ -67,11 +166,11 @@
 
 ### :art:
 
-* 添加readme ([5ae8572](https://github.com/kongnet/skybase/commit/5ae8572))
+* 添加readme ([5ae8572](https://github.com/kongnet/skybase/commit/5ae85725b0240f80edfc7df4ecd6918c23770e56))
 
 ### :memo:
 
-* 增加数据探针帮助文件 ([a74a388](https://github.com/kongnet/skybase/commit/a74a388))
+* 增加数据探针帮助文件 ([a74a388](https://github.com/kongnet/skybase/commit/a74a38856393083043b9b0373f4993dafc435011))
 
 
 
@@ -85,7 +184,7 @@
 
 ### :bug:
 
-* information_schema单词拼错 ([22548d0](https://github.com/kongnet/skybase/commit/22548d0))
+* information_schema单词拼错 ([22548d0](https://github.com/kongnet/skybase/commit/22548d081cfb97882fa3c14213b69f741f4a4206))
 
 
 
@@ -94,7 +193,7 @@
 
 ### :wrench:
 
-* 修改模板中index的数据库加载 ([4727cb6](https://github.com/kongnet/skybase/commit/4727cb6))
+* 修改模板中index的数据库加载 ([4727cb6](https://github.com/kongnet/skybase/commit/4727cb60468ee5d773b67654c8d3ffb19d2fb3fa))
 
 
 
@@ -103,7 +202,7 @@
 
 ### :wrench:
 
-* 修改模板中的配置文件 ([c298f97](https://github.com/kongnet/skybase/commit/c298f97))
+* 修改模板中的配置文件 ([c298f97](https://github.com/kongnet/skybase/commit/c298f97124f919612b36d210f1acf43b61d71719))
 
 
 
@@ -112,7 +211,7 @@
 
 ### :memo:
 
-* 增加模板文件 ([e1a0620](https://github.com/kongnet/skybase/commit/e1a0620))
+* 增加模板文件 ([e1a0620](https://github.com/kongnet/skybase/commit/e1a062001d3646f0ae4b0f0213cc0f01d25d4edd))
 
 
 
@@ -126,7 +225,7 @@
 
 ### :sparkles:
 
-* 增加skybase的默认init模板 ([408126e](https://github.com/kongnet/skybase/commit/408126e))
+* 增加skybase的默认init模板 ([408126e](https://github.com/kongnet/skybase/commit/408126e84c84852faad9d8480f30e8be94372d5b))
 
 
 
@@ -135,7 +234,7 @@
 
 ### :memo:
 
-* 增加探针服务器readme ([5e8c069](https://github.com/kongnet/skybase/commit/5e8c069))
+* 增加探针服务器readme ([5e8c069](https://github.com/kongnet/skybase/commit/5e8c0693397ea737e0413a068218add3f7600f2f))
 
 
 
@@ -144,7 +243,7 @@
 
 ### :art:
 
-* 在测试环境下,返回实际提交的参数 ([423feb2](https://github.com/kongnet/skybase/commit/423feb2))
+* 在测试环境下,返回实际提交的参数 ([423feb2](https://github.com/kongnet/skybase/commit/423feb206c8942333b222be86e1596ead316bfe9))
 
 
 
@@ -168,7 +267,7 @@
 
 ### :sparkles:
 
-* 优化mock案例，增加readme文档注释 ([b80d448](https://github.com/kongnet/skybase/commit/b80d448))
+* 优化mock案例，增加readme文档注释 ([b80d448](https://github.com/kongnet/skybase/commit/b80d448e147bacdde1d422f446514af60c781efa))
 
 
 
@@ -257,7 +356,7 @@
 
 ### :bug:
 
-* 启动时候的颜色修正 ([96eac4a](https://github.com/kongnet/skybase/commit/96eac4a))
+* 启动时候的颜色修正 ([96eac4a](https://github.com/kongnet/skybase/commit/96eac4a81b24f033520a71fa0e64c8e2e3f926fc))
 
 
 

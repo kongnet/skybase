@@ -37,8 +37,8 @@ async function getTableColumnSize () {
   let obj = {}
   r.forEach(item => {
     if (obj[item.dbName]) {
-      arr[obj[item.dbName]].children.push({ name: item.tableComment + '\n' + item.tableName + '\n\n' + ((item.rowCount + '').toMoney(2)), value: item.rowCount || 0 })
-      arrSize[obj[item.dbName]].children.push({ name: item.tableComment + '\n' + item.tableName + '\n\n' + ((item.dataSize + '').toMoney(2)), value: item.dataSize || 0 })
+      arr[obj[item.dbName]].children.push({ name: item.tableComment + '\n' + item.tableName + '\n\n' + (item.rowCount + '').toMoney(2), value: item.rowCount || 0 })
+      arrSize[obj[item.dbName]].children.push({ name: item.tableComment + '\n' + item.tableName + '\n\n' + (item.dataSize + '').toMoney(2), value: item.dataSize || 0 })
     } else {
       if (!['performance_schema', 'mysql', 'information_schema', 'sys', 'happyminer_test'].includes(item.dbName)) {
         arr.push({ name: item.dbName, children: [] })

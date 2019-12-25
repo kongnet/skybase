@@ -5,7 +5,7 @@ module.exports = {
     await global.redis.setex(key, 1, val)
     const v = await global.redis.get(key)
 
-    if(v === val){
+    if (v === val) {
       ctx.ok()
     } else {
       ctx.throwCode(0, '失败')
