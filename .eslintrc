@@ -31,6 +31,7 @@
     ],
     "space-infix-ops": 1,
     "no-console": 0,
+    "require-atomic-updates": "off",
     "complexity": [
       1,
       10
