@@ -3,6 +3,12 @@ const packageJson = require('../package')
 module.exports = {
   name: packageJson.name,
   rootDir: path.join(__dirname, '../'),
+
+  // 重定向配置，逻辑放在中间件 sky-check-param 内，所以必须要使用该中间件，此功能才生效
+  redirect: {
+    '/redirect/original': '/redirect/to'
+  },
+
   mysql: {
     host: '127.0.0.1',
     port: 3306,

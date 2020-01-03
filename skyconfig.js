@@ -108,6 +108,11 @@ module.exports = {
     'sky-api-register'
   ],
 
+  // 重定向配置，逻辑放在中间件 sky-check-param 内，所以必须要使用该中间件，此功能才生效
+  redirect: {
+    // '/original': '/redirect'
+  },
+
   /**
    * 限制post来的数据，这个配置将在 sky/middleware/bodyParse.js 中使用
    */
