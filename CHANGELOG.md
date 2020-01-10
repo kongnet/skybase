@@ -1,3 +1,12 @@
+## [0.1.73](https://github.com/kongnet/skybase/compare/v0.1.72...v0.1.73) (2020-01-10)
+
+
+### :sparkles:
+
+* 增加api统计队列名称设置rtsQueueName ([46cedc1](https://github.com/kongnet/skybase/commit/46cedc19dddef9b573f27fabe96c919016184732))
+
+
+
 ## [0.1.72](https://github.com/kongnet/skybase/compare/v0.1.71...v0.1.72) (2020-01-10)
 
 
