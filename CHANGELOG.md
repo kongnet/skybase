@@ -1,3 +1,12 @@
+## [0.1.72](https://github.com/kongnet/skybase/compare/v0.1.71...v0.1.72) (2020-01-10)
+
+
+### :sparkles:
+
+* 更新的统计到mq的方法 ([a0ea9b3](https://github.com/kongnet/skybase/commit/a0ea9b3f8c139281f5c8ae2973cdcd4299165488))
+
+
+
 ## [0.1.71](https://github.com/kongnet/skybase/compare/v0.1.69...v0.1.71) (2020-01-03)
 
 

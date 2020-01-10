@@ -1,7 +1,6 @@
 // 这里存的是默认配置，使用该框架前，可以考虑把这里的配置拷贝出去，也可以只拷贝需要覆盖的配置。
 const path = require('path')
 module.exports = {
-
   /**
    * 项目名称，启动时，会以3D字体的形式在控制台打印
    * */
@@ -123,9 +122,13 @@ module.exports = {
     jsonLimit: '2mb', // body中json格式大小限制
     textLimit: '2mb', //
     extendTypes: {
-      custom: [
-        'text/xml'
-      ]
+      custom: ['text/xml']
     }
-  }
+  },
+
+  /**
+   * rts queueName名称
+   * */
+
+  rtsQueueName: 'skybaseRtsQueueName'
 }
