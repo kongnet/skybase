@@ -321,3 +321,45 @@ const redisObj = {
 - rd.keysLimit.add('\*') 关闭所有限制
 - rd.keysLimit.status = 1 or rd.keysLimit.del('\*') 打开 限制
 - 打开后 await rd.get('k1') **报错**
+
+#### rabbitMQ 操作
+
+##### 概述
+
+> 增加 rabbitMQ 目的是为了解耦业务逻辑，削峰填谷.
+
+##### rabbitMQ 的安装
+
+- 使用 docker 安装
+- 默认 guest/guest 登陆 http://localhost:15672/#/
+- 如果发现用户密码不对的 docker 镜像，可以登陆 docker 使用如下命令
+- rabbitmqctl list_users 列出所有用户
+- rabbitmqctl add_user username 添加用户，输入密码
+- rabbitmqctl change_password username newpasswd 修改用户密码
+- http://localhost:15672/#/ 本地登陆管理后台
+
+##### skybase 的 MQ 例子
+
+- index_mq_stat.js 生产者
+
+```javascript
+const skyDB = new SkyDB({
+  mysql: config.mysql,
+  redis: config.redis,
+  rabbitMQ: config.rabbitMQ
+})
+const db = await skyDB.mysql // 创建mysql实例
+const rd = await skyDB.redis // 创建redis 实例
+const rabbitMQ = await skyDB.rabbitMQ // 创建mq 实例
+global.db = db
+global.redis = rd
+global.rtsMQ = rabbitMQ // 此处注意rtsMQ不为空，skybase自动启动此对象对应的MQ实例
+```
+
+- 正确配置 rabbitMQ 后，nodemon index_mq_stat.js ，MQ 链接正确后会答应 队列名和消息总数
+- 查看 api 统计总表，http://127.0.0.1:13000/skyapi/sky-stat/getAll?type=mix
+- ab 压力测试后，再次查看，发现统计未变化
+
+- rts_consumer.js 消费者
+- 生产者将统计打到 mq，启动消费者 nodemon rts_consumer.js
+- 稍后 查看http://127.0.0.1:13000/skyapi/sky-stat/getAll?type=mix，统计值发生变化，为正确
