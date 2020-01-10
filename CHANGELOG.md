@@ -1,5 +1,9 @@
-## [0.1.70](https://github.com/kongnet/skybase/compare/v0.1.69...v0.1.70) (2020-01-03)
+## [0.1.71](https://github.com/kongnet/skybase/compare/v0.1.69...v0.1.71) (2020-01-03)
 
+
+### :sparkles:
+
+* 增加redirect功能 ([35ead02](https://github.com/kongnet/skybase/commit/35ead02d749b36b6adadfe4ce3e92ac2db1cdfa7))
 
 
 
