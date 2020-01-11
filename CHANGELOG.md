@@ -1,3 +1,12 @@
+## [0.1.76](https://github.com/kongnet/skybase/compare/v0.1.75...v0.1.76) (2020-01-11)
+
+
+### :sparkles:
+
+* 增加最近20条错误列表 ([171ab33](https://github.com/kongnet/skybase/commit/171ab330be6ce795e5151d9e2c27ae47a5028291))
+
+
+
 ## [0.1.75](https://github.com/kongnet/skybase/compare/v0.1.74...v0.1.75) (2020-01-10)
 
 

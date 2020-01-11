@@ -368,3 +368,4 @@ global.rtsMQ = rabbitMQ // 此处注意rtsMQ不为空，skybase自动启动此�
 
 - 路由 router 层+业务 service 层的错误，将被写入\$G.errorList 中，保留最近 20 条
 - 可以创建一个 错误查询接口 来返回此对象 ctx.ok(\$G.errorList)
+- 注意这里的列表是单进程的，没有持久化，启动后即清空
