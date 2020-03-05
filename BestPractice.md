@@ -187,8 +187,8 @@
           type: 'string'
         }
     },
-    'token': false,
-    'needSign': false,
+    'token': false, // true会检测http header中是否有token，并可进入验证token是否正确
+    'needSign': false, // true会要求提交参数需要有sign验证，算法自定义
     'err_code': {},
     'test': {},
     'front': true
