@@ -76,7 +76,7 @@
     param: {}, //无qs（地址栏）参数。 qs form header http协议不同位置
     test: {},
     token: false,
-    needSign: false,
+    needSign: false, // 查看 needSign 验签接口 用法
     front: true
   }
 ```
@@ -124,13 +124,13 @@
 
 ##### needSign 验签接口
 
-- http://127.0.0.1:13000/skyapi/mock/getSign?t=xxx&sign=xxx，启动nodemon index_stat
-- 当 api 定义中 needSign 为 1 时，启用验签
-- 例子在 ./middleware/sample_middleware.js 中
+- http://127.0.0.1:13000/skyapi/mock/getSign?t=xxx&sign=xxx，启动**nodemon index_stat\*\*
+- 当 api 定义中 **needSign** 为 **1** 时，启用验签
+- 例子在 **./middleware/sample_middleware.js** 中
 - 用户可自定义验签的函数
 - t 代表时间整型，
-- 所有参数，除 sign（一般不在验签的列中），按字母升序后，进行验签，验签不通过，直接返回错误
-- 一般验签中间件放在，其他中间前面看./skyconfig.js 配置文件
+- 所有参数，除 **sign**（一般不在验签的列中），按字母升序后，进行验签，验签不通过，直接返回错误
+- 一般验签中间件放在其他中间前面,看**skyconfig.js** 配置文件
 
 #### 复杂 API
 
@@ -143,6 +143,7 @@
 - 注意：api 定义中是 fileType，router 中是 allowType，历史原因
 - path 是相对 upload 上传目录的目录，例子中是 demo
 - nameRule 是每次上传的文件名称，一般由分类+时间+随机组成，例子中是 18 位长的随机字符串
+- nodemon 启动项目后，访问http://127.0.0.1:13000/upload_demo.html
 
 ##### web 中间件
 
@@ -340,12 +341,12 @@ const redisObj = {
 
 ##### rabbitMQ 的安装
 
-- 使用 docker 安装
-- 默认 guest/guest 登陆 http://localhost:15672/#/
+- 使用 **docker** 安装
+- 默认 **guest/guest** 登陆 http://localhost:15672/#/
 - 如果发现用户密码不对的 docker 镜像，可以登陆 docker 使用如下命令
-- rabbitmqctl list_users 列出所有用户
-- rabbitmqctl add_user username 添加用户，输入密码
-- rabbitmqctl change_password username newpasswd 修改用户密码
+- **rabbitmqctl list_users** 列出所有用户
+- **rabbitmqctl add_user username** 添加用户，输入密码
+- **rabbitmqctl change_password username newpasswd** 修改用户密码
 - http://localhost:15672/#/ 本地登陆管理后台
 
 ##### skybase 的 MQ 例子
@@ -356,9 +357,10 @@ const redisObj = {
 const skyDB = new SkyDB({
   mysql: config.mysql,
   redis: config.redis,
+  // mssql: config.mssql, // 创建mssql 实例
   rabbitMQ: config.rabbitMQ
 })
-const db = await skyDB.mysql // 创建mysql实例
+const db = await skyDB.mysql // 创建mysql 实例
 const rd = await skyDB.redis // 创建redis 实例
 const rabbitMQ = await skyDB.rabbitMQ // 创建mq 实例
 global.db = db
@@ -378,4 +380,4 @@ global.rtsMQ = rabbitMQ // 此处注意rtsMQ不为空，skybase自动启动此�
 
 - 路由 router 层+业务 service 层的错误，将被写入\$G.errorList 中，保留最近 20 条
 - 可以创建一个 错误查询接口 来返回此对象 ctx.ok(\$G.errorList)
-- 注意这里的列表是单进程的，没有持久化，启动后即清空
+- **注意** 这里的列表是单进程的，没有持久化，启动后即清空
