@@ -1,3 +1,8 @@
+## [0.1.78](https://github.com/kongnet/skybase/compare/v0.1.77...v0.1.78) (2020-03-05)
+
+
+
+
 ## [0.1.77](https://github.com/kongnet/skybase/compare/v0.1.76...v0.1.77) (2020-01-11)
 
 

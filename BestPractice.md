@@ -122,6 +122,16 @@
 - http://127.0.0.1:13000/skyapi/mock/qrcode?str=
 - 通过对上面文件结构的理解，自行查看
 
+##### needSign 验签接口
+
+- http://127.0.0.1:13000/skyapi/mock/getSign?t=xxx&sign=xxx，启动nodemon index_stat
+- 当 api 定义中 needSign 为 1 时，启用验签
+- 例子在 ./middleware/sample_middleware.js 中
+- 用户可自定义验签的函数
+- t 代表时间整型，
+- 所有参数，除 sign（一般不在验签的列中），按字母升序后，进行验签，验签不通过，直接返回错误
+- 一般验签中间件放在，其他中间前面看./skyconfig.js 配置文件
+
 #### 复杂 API
 
 ##### 文件上传
