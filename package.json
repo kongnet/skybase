@@ -22,7 +22,9 @@
     "demo6": "nodemon demo/6-sql-test/index.js",
     "demo7": "nodemon demo/7-token/index.js",
     "demo8": "nodemon demo/8-test/index.js",
-    "demo9": "nodemon demo/9-mysql-chart/index.js"
+    "demo9": "nodemon demo/9-mysql-chart/index.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "",
   "license": "MIT",
@@ -41,7 +43,8 @@
     "meeko": "*",
     "mockjs": "^1.0.1-beta3",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.7"
+    "request-promise-native": "^1.0.7",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "amqplib": "^0.5.3",
@@ -61,5 +64,6 @@
     "commitizen": {
       "path": "./node_modules/cz-jt"
     }
-  }
+  },
+  "snyk": true
 }
