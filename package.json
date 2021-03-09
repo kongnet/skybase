@@ -27,7 +27,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "amqplib": "^0.5.3",
+    "amqplib": "^0.7.1",
     "figlet": "^1.2.1",
     "ioredis": "^4.10.0",
     "j2sql": "^1.9.25",
@@ -44,7 +44,7 @@
     "request-promise-native": "^1.0.7"
   },
   "devDependencies": {
-    "amqplib": "^0.5.3",
+    "amqplib": "^0.7.1",
     "babel-eslint": "^10.0.2",
     "cc-jt": "^0.1.21",
     "co-mocha": "^1.2.2",
