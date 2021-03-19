@@ -1,3 +1,17 @@
+## [0.1.82](https://github.com/kongnet/skybase/compare/v0.1.81...v0.1.82) (2020-05-26)
+
+
+
+
+## [0.1.81](https://github.com/kongnet/skybase/compare/v0.1.80...v0.1.81) (2020-05-26)
+
+
+### :sparkles:
+
+* 增加sokcet.io支持 ([74f0047](https://github.com/kongnet/skybase/commit/74f0047bcc9b2be393d062a0d490b4210e35619e))
+
+
+
 ## [0.1.80](https://github.com/kongnet/skybase/compare/v0.1.79...v0.1.80) (2020-03-09)
 
 
