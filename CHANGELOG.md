@@ -1,3 +1,12 @@
+## [0.1.83](https://github.com/kongnet/skybase/compare/v0.1.82...v0.1.83) (2021-03-19)
+
+
+### :zap:
+
+* 默认配置支持多层动态路径 ([3af4273](https://github.com/kongnet/skybase/commit/3af42730ce48087c864159ade1af043cae120fbc))
+
+
+
 ## [0.1.82](https://github.com/kongnet/skybase/compare/v0.1.81...v0.1.82) (2020-05-26)
 
 
