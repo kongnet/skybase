@@ -27,7 +27,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "amqplib": "^0.5.3",
+    "amqplib": "*",
     "figlet": "^1.2.1",
     "ioredis": "^4.10.0",
     "j2sql": "^1.9.25",
