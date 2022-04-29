@@ -1,5 +1,9 @@
-## [0.1.85](https://github.com/kongnet/skybase/compare/v0.1.88...v0.1.85) (2022-04-29)
+## [0.1.87](https://github.com/kongnet/skybase/compare/v0.1.88...v0.1.87) (2022-04-29)
 
+
+### :wrench:
+
+* 升级 ([d04e044](https://github.com/kongnet/skybase/commit/d04e044dc8301cf1b49979dba27e142e606a7d85))
 
 
 
