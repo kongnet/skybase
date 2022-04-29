@@ -1,6 +1,6 @@
 {
   "name": "skybase",
-  "version": "0.1.88",
+  "version": "0.1.85",
   "description": "sky框架",
   "main": "index.js",
   "directories": {
@@ -30,10 +30,10 @@
     "amqplib": "*",
     "figlet": "^1.5.2",
     "kafka-node": "*",
-    "koa": "^2.7.0",
-    "koa-better-body": "^3.0.4",
-    "koa-convert": "^1.2.0",
-    "koa-router": "^7.4.0",
+    "koa": "^2.13.4",
+    "koa-better-body": "^3.3.9",
+    "koa-convert": "^2.0.0",
+    "koa-router": "^10.1.1",
     "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
     "meeko": "*"
