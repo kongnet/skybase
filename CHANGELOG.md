@@ -1,3 +1,12 @@
+## [0.1.87](https://github.com/kongnet/skybase/compare/v0.1.86...v0.1.87) (2022-04-29)
+
+
+### :wrench:
+
+* 降低版本 ([4b6c46a](https://github.com/kongnet/skybase/commit/4b6c46ab2888898fef02384240442d260f1c211c))
+
+
+
 ## [0.1.86](https://github.com/kongnet/skybase/compare/v0.1.85...v0.1.86) (2022-04-29)
 
 

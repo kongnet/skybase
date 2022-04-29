@@ -30,7 +30,7 @@
     "amqplib": "*",
     "figlet": "^1.5.2",
     "kafka-node": "*",
-    "koa": "^2.13.4",
+    "koa": "^2.7.0",
     "koa-better-body": "^3.0.4",
     "koa-convert": "^1.2.0",
     "koa-router": "^7.4.0",
