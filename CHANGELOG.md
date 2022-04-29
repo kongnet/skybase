@@ -1,4 +1,4 @@
-## 0.1.84 (2022-04-27)
+## [0.1.85](https://github.com/kongnet/skybase/compare/96eac4a81b24f033520a71fa0e64c8e2e3f926fc...v0.1.85) (2022-04-27)
 
 
 ### :ambulance:
@@ -47,6 +47,7 @@
 
 ### :wrench:
 
+* 更新依赖包版本 ([9f1eefb](https://github.com/kongnet/skybase/commit/9f1eefb40b2433536252428a0eac6f8053b9b1a7))
 * 修改模板中的配置文件 ([c298f97](https://github.com/kongnet/skybase/commit/c298f97124f919612b36d210f1acf43b61d71719))
 * 修改模板中index的数据库加载 ([4727cb6](https://github.com/kongnet/skybase/commit/4727cb60468ee5d773b67654c8d3ffb19d2fb3fa))
 

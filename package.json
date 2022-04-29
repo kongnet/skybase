@@ -31,7 +31,7 @@
     "figlet": "^1.5.2",
     "kafka-node": "*",
     "koa": "^2.13.4",
-    "koa-better-body": "^3.3.9",
+    "koa-better-body": "^3.0.4",
     "koa-convert": "^2.0.0",
     "koa-router": "^10.1.1",
     "koa-static": "^5.0.0",
