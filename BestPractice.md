@@ -225,7 +225,7 @@
 ### 复杂例子
 
 > 最终实现业务逻辑，离不开 mysql redis mq 等操作
-> http://127.0.0.1:13000/skyapi/probe/mysql // 查看探针例子 这里 treemap 的例子可能会出不来，是因为 地图的 key 是个人的，过期的原因 ./template/treemap-mysql.html
+> http://127.0.0.1:13000/skyapi/probe/mysql // 查看探针例子 这里 treemap 的例子可能会出不来，是因为 地图的 key 是个人的，过期的原因 ./template/treemap-mysql.html 第 54 行，你要改成你的实名授权过 ak 值 enjoy :)
 > 如果直接看不懂，我们之后回过头来再看![](https://raw.githubusercontent.com/kongnet/skybase/master/screenShot/demo9.png)
 
 #### mysql 操作
