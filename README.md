@@ -1,39 +1,36 @@
 # skybase
-![jiatuiLogo](https://github.com/kongnet/skybase/raw/master/screenShot/logo.png)
 
 Sky web base suit
 
 ## 安装 Install
 
-
     npm i skybase
 
-
-## 开始你的web世界 Hello World
+## 开始你的 web 世界 Hello World
 
     const sky = require('skybase')
-    
+
     sky.start({}, async () => {
       console.log('Program running...')
     })
 
 ## start(config, afterStart)
 
-skybase只有一个方法
+skybase 只有一个方法
 
-* config 配置
-* afterStart 启动成功后执行的方法，可用async方法
+- config 配置
+- afterStart 启动成功后执行的方法，可用 async 方法
 
 ## 配置
 
     const path = require('path')
     module.exports = {
-    
+
       /**
        * 项目名称，启动时，会以3D字体的形式在控制台打印
        * */
       name: 'skybase',
-    
+
       /**
        * 中间件
        * ps. 填写中间件的文件名（如果不填文件后缀，则认为是.js），自定义的中间件一定要放在项目根目录的 middleware 文件夹里，不然找不到。
@@ -60,19 +57,19 @@ skybase只有一个方法
         'sky-output',
         'sky-api-register'
       ],
-    
+
       /**
        * token 保存key值
        * */
       tokenName: 'skybase',
-    
+
       /**
        * 入口文件的路径
        *
        * 如果不填，或者转为布尔值为false，则使用 path.dirname(process.mainModule.filename) ，即本node应用的入口文件所在目录
        * */
       rootDir: path.dirname(process.mainModule.filename),
-    
+
       /**
        * api定义所在目录
        *
@@ -81,7 +78,7 @@ skybase只有一个方法
        * 填写相对于 rootDir 的相对路径
        * */
       apiDir: './model/api',
-    
+
       /**
        * 控制器所在目录
        *
@@ -90,7 +87,7 @@ skybase只有一个方法
        * 填写相对于 rootDir 的相对路径
        * */
       routerDir: './router',
-    
+
       /**
        * service所在目录
        *
@@ -100,12 +97,12 @@ skybase只有一个方法
        * 填写相对于 rootDir 的相对路径
        * */
       serviceDir: '',
-    
+
       /**
        * 是否打印日志
        * */
       logger: true,
-    
+
       /**
        * 自定义中间件所在目录
        *
@@ -114,7 +111,7 @@ skybase只有一个方法
        * 填写相对于 rootDir 的相对路径
        * */
       middlewareDir: './middleware',
-    
+
       /**
        * 静态服务的路径
        *
@@ -123,7 +120,7 @@ skybase只有一个方法
        * 填写相对于 rootDir 的相对路径
        * */
       staticDir: './www',
-    
+
       /**
        * 限制post来的数据，这个配置将在 sky/middleware/bodyParse.js 中使用
        */
@@ -142,21 +139,25 @@ skybase只有一个方法
 
 ## api 定义
 
-skybase框架的api定义功能主要有以下几点：
+skybase 框架的 api 定义功能主要有以下几点：
 
-1. 指定api所需参数，会自动校验参数是否符合设定
-2. 输出api接口文档，前端同学可直观查看
+1. 指定 api 所需参数，会自动校验参数是否符合设定
+2. 输出 api 接口文档，前端同学可直观查看
 3. 指定接口的访问权限。如是否登录，是否签名，登录者是否拥有指定权限
-### param中的type类型说明
-* int 整形
-* positive/negative 正数/负数
-* string 字符型
-* datetime 可以被Date.parse的 'YYYY-MM-DD hh:mm:ss'
-* enum 数组，并要求提交的参数包含在，数组列表中
-* bool bool型
-* number 数值型
-* array 数组型，用得少，可以为它配置items的类型： arrayParam1:{type:'array',items:{type:'string'}}
+
+### param 中的 type 类型说明
+
+- int 整形
+- positive/negative 正数/负数
+- string 字符型
+- datetime 可以被 Date.parse 的 'YYYY-MM-DD hh:mm:ss'
+- enum 数组，并要求提交的参数包含在，数组列表中
+- bool bool 型
+- number 数值型
+- array 数组型，用得少，可以为它配置 items 的类型： arrayParam1:{type:'array',items:{type:'string'}}
+
 ### 案例
+
     module.exports = {
       __swagger__: { // 用于把此文件内的接口归为同一组的组名
         name: '文章库-文章管理',
@@ -197,19 +198,27 @@ skybase框架的api定义功能主要有以下几点：
       }
     }
 
+**接口地址**：
 
-**接口地址**： 
-
-* 如果以 / 开始，接口路径则完全等于所编写的地址
-* 否则接口路径的规则为：
+- 如果以 / 开始，接口路径则完全等于所编写的地址
+- 否则接口路径的规则为：
 
 ## 实操案例
-### mock服务器
-* 1. 运行 npm run demo5 //启动mock服务器，前提需要有nodemon全局安装 npm i -g nodemon
-* 2. 启动后 访问 http://127.0.0.1:8888/mock/first
-* 3. mock定义在 [您的项目]\node_modules\skybase\demo\5-mock-api\model\api\mock.js
 
-### mysql探针
-* 1. 运行 npm run demo9 //启动mysql探针服务器，前提需要有nodemon全局安装 npm i -g nodemon
-* 2. 启动后 访问 http://127.0.0.1:13000/skyapi/probe/mysql
-![demo9](https://github.com/kongnet/skybase/raw/master/screenShot/demo9.png)
+### mock 服务器
+
+- 1. 运行 npm run demo5 //启动 mock 服务器，前提需要有 nodemon 全局安装 npm i -g nodemon
+- 2. 启动后 访问 http://127.0.0.1:8888/mock/first
+- 3. mock 定义在 [您的项目]\node_modules\skybase\demo\5-mock-api\model\api\mock.js
+
+### mysql 探针
+
+- 1. 运行 npm run demo9 //启动 mysql 探针服务器，前提需要有 nodemon 全局安装 npm i -g nodemon
+- 2. 启动后 访问 http://127.0.0.1:13000/skyapi/probe/mysql
+     ![demo9](https://github.com/kongnet/skybase/raw/master/screenShot/demo9.png)
+
+### RTS 打点例子
+
+> RTS 是时序数据库 https://github.com/kongnet/skyrts
+
+![demo1](https://github.com/kongnet/skybase/raw/master/screenShot/demo1.png)
