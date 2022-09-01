@@ -1,3 +1,12 @@
+## [0.1.92](https://github.com/kongnet/skybase/compare/v0.1.91...v0.1.92) (2022-08-31)
+
+
+### :ambulance:
+
+* 非get/post/all打印出错 ([1573187](https://github.com/kongnet/skybase/commit/157318784828856e7a689c654ce23ba1953f65a5))
+
+
+
 ## [0.1.91](https://github.com/kongnet/skybase/compare/v0.1.90...v0.1.91) (2022-05-16)
 
 
