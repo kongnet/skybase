@@ -1,3 +1,12 @@
+## [0.1.94](https://github.com/kongnet/skybase/compare/v0.1.93...v0.1.94) (2023-04-25)
+
+
+### :bug:
+
+* 一些提示修改成en ([a9da814](https://github.com/kongnet/skybase/commit/a9da814c939f37cab35dadb46456519e84868024))
+
+
+
 ## [0.1.93](https://github.com/kongnet/skybase/compare/v0.1.92...v0.1.93) (2022-09-01)
 
 
