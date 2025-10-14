@@ -1,3 +1,12 @@
+## [0.1.96](https://github.com/kongnet/skybase/compare/v0.1.95...v0.1.96) (2025-10-14)
+
+
+### :sparkles:
+
+* (koa 版本升级) ([eb043e1](https://github.com/kongnet/skybase/commit/eb043e18851d6946c92de77940a8756dfe89b920))
+
+
+
 ## [0.1.95](https://github.com/kongnet/skybase/compare/v0.1.94...v0.1.95) (2024-07-17)
 
 
