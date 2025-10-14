@@ -1,3 +1,12 @@
+## [0.1.95](https://github.com/kongnet/skybase/compare/v0.1.94...v0.1.95) (2024-07-17)
+
+
+### :sparkles:
+
+* 支持https定义 ([688d08f](https://github.com/kongnet/skybase/commit/688d08f4edb52c48f8d4a207c7bf2660620bf320))
+
+
+
 ## [0.1.94](https://github.com/kongnet/skybase/compare/v0.1.93...v0.1.94) (2023-04-25)
 
 

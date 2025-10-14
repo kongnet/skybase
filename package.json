@@ -30,7 +30,7 @@
     "amqplib": "*",
     "figlet": "^1.5.2",
     "kafka-node": "*",
-    "koa": "^2.13.4",
+    "koa": "^2.16.2",
     "koa-better-body": "^3.3.9",
     "koa-convert": "^2.0.0",
     "koa-router": "^10.1.1",
@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "conventional-changelog": "^3.1.10",
-    "cz-jt": "^0.1.11"
+    "cz-jt": "^0.1.13"
   },
   "config": {
     "commitizen": {
