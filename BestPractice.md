@@ -198,6 +198,20 @@
           type: 'string'
         }
     },
+    errSimple: {
+            default: 'Parameter error, please check the input parameters',
+            zh: '参数错误，请检查输入参数'
+  },
+        /*  
+        !有errSimple 看是否配置了语言参数_lang=en 或者 默认default,或者直接返回errSimple.
+        !没有 errSimple 返回 ctx.checkedData.msg
+        ^ errSimple: {
+        ^    default: 'Parameter error, please check the input parameters',
+        ^    zh: '参数错误，请检查输入参数'
+        ^  },
+        !或者
+        ^ errSimple:'err msg'
+      */
     'token': false, // true会检测http header中是否有token，并可进入验证token是否正确
     'needSign': false, // true会要求提交参数需要有sign验证，算法自定义
     'err_code': {},
