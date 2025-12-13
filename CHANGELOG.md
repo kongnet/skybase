@@ -1,9 +1,25 @@
-## [0.1.100](https://github.com/kongnet/skybase/compare/v0.1.95...v0.1.100) (2025-12-13)
+## [0.1.104](https://github.com/kongnet/skybase/compare/v0.1.103...v0.1.104) (2025-12-13)
+
+
+
+
+## [0.1.103](https://github.com/kongnet/skybase/compare/v0.1.102...v0.1.103) (2025-12-13)
+
+
+
+
+## [0.1.102](https://github.com/kongnet/skybase/compare/v0.1.101...v0.1.102) (2025-12-13)
+
+
+
+
+## [0.1.101](https://github.com/kongnet/skybase/compare/v0.1.95...v0.1.101) (2025-12-13)
 
 
 ### :sparkles:
 
 * (koa 版本升级) ([eb043e1](https://github.com/kongnet/skybase/commit/eb043e18851d6946c92de77940a8756dfe89b920))
+* 增加多语言前端自定义错误 ([107bea2](https://github.com/kongnet/skybase/commit/107bea25a2c4edcf6d59b46508f1efadd5d0d70c))
 
 
 
