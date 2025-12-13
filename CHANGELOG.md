@@ -1,3 +1,8 @@
+## [0.1.106](https://github.com/kongnet/skybase/compare/v0.1.105...v0.1.106) (2025-12-13)
+
+
+
+
 ## [0.1.105](https://github.com/kongnet/skybase/compare/v0.1.104...v0.1.105) (2025-12-13)
 
 
