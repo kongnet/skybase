@@ -1,5 +1,9 @@
-## [0.1.107](https://github.com/kongnet/skybase/compare/v0.1.101...v0.1.107) (2025-12-18)
+## [0.1.108](https://github.com/kongnet/skybase/compare/v0.1.101...v0.1.108) (2025-12-18)
 
+
+### :sparkles:
+
+* 增加多语言前端自定义错误 ([107bea2](https://github.com/kongnet/skybase/commit/107bea25a2c4edcf6d59b46508f1efadd5d0d70c))
 
 
 
@@ -125,15 +129,15 @@
 
 ### :art:
 
-* 添加readme ([5ae8572](https://github.com/kongnet/skybase/commit/5ae85725b0240f80edfc7df4ecd6918c23770e56))
 * 在测试环境下,返回实际提交的参数 ([423feb2](https://github.com/kongnet/skybase/commit/423feb206c8942333b222be86e1596ead316bfe9))
+* 添加readme ([5ae8572](https://github.com/kongnet/skybase/commit/5ae85725b0240f80edfc7df4ecd6918c23770e56))
 
 ### :bug:
 
+* information_schema单词拼错 ([22548d0](https://github.com/kongnet/skybase/commit/22548d081cfb97882fa3c14213b69f741f4a4206))
 * 创建中间暴露到index，修复controller出错时候的信息 ([8c00a07](https://github.com/kongnet/skybase/commit/8c00a07f3ed6c0549ee2db84c3f42d0e542429e7))
 * 启动时候的颜色修正 ([96eac4a](https://github.com/kongnet/skybase/commit/96eac4a81b24f033520a71fa0e64c8e2e3f926fc))
 * 增加上传文件限制的maxFileSize配置项 ([76d4657](https://github.com/kongnet/skybase/commit/76d46577d668dc39e6d6cbd2ec170bff8a09ff6f))
-* information_schema单词拼错 ([22548d0](https://github.com/kongnet/skybase/commit/22548d081cfb97882fa3c14213b69f741f4a4206))
 
 ### :fire:
 
@@ -141,33 +145,33 @@
 
 ### :memo:
 
-* 简单的实践文档 ([cf0ceaf](https://github.com/kongnet/skybase/commit/cf0ceaf5f8ac61e5ef7cf1997a4935b6b0eb90de))
-* 修改创建项目的帮助文档 ([73154d8](https://github.com/kongnet/skybase/commit/73154d89b33d039a45401b7ab64ccb9451f1e119))
 * 修改上传文件说明 ([9f94e21](https://github.com/kongnet/skybase/commit/9f94e2100ae8e4d2bce614395b1762937d117d9d))
+* 修改创建项目的帮助文档 ([73154d8](https://github.com/kongnet/skybase/commit/73154d89b33d039a45401b7ab64ccb9451f1e119))
 * 修改说明文档，增加Changelog.md ([fb4708b](https://github.com/kongnet/skybase/commit/fb4708bc445a1cde593668edf094aeefbe665543))
-* 增加模板文件 ([e1a0620](https://github.com/kongnet/skybase/commit/e1a062001d3646f0ae4b0f0213cc0f01d25d4edd))
-* 增加数据探针帮助文件 ([a74a388](https://github.com/kongnet/skybase/commit/a74a38856393083043b9b0373f4993dafc435011))
 * 增加探针服务器readme ([5e8c069](https://github.com/kongnet/skybase/commit/5e8c0693397ea737e0413a068218add3f7600f2f))
+* 增加数据探针帮助文件 ([a74a388](https://github.com/kongnet/skybase/commit/a74a38856393083043b9b0373f4993dafc435011))
+* 增加模板文件 ([e1a0620](https://github.com/kongnet/skybase/commit/e1a062001d3646f0ae4b0f0213cc0f01d25d4edd))
+* 简单的实践文档 ([cf0ceaf](https://github.com/kongnet/skybase/commit/cf0ceaf5f8ac61e5ef7cf1997a4935b6b0eb90de))
 
 ### :sparkles:
 
-* 表和字段除id外，没有注解标注 ([45b0b49](https://github.com/kongnet/skybase/commit/45b0b493f8d7754d13b76e11d9c5447ec07c1955))
-* 更新的统计到mq的方法 ([a0ea9b3](https://github.com/kongnet/skybase/commit/a0ea9b3f8c139281f5c8ae2973cdcd4299165488))
+* mysql tree ([acf3e2c](https://github.com/kongnet/skybase/commit/acf3e2cdfe9ff27bb047f36f1362775e64ca35ac))
+* skyjt init 模板中增加 mock 例子 ([c417d8e](https://github.com/kongnet/skybase/commit/c417d8e79ef18aa72db85e8d1ffbfea330ed256d))
 * 优化mock案例，增加readme文档注释 ([b80d448](https://github.com/kongnet/skybase/commit/b80d448e147bacdde1d422f446514af60c781efa))
-* 增加最近20条错误列表 ([171ab33](https://github.com/kongnet/skybase/commit/171ab330be6ce795e5151d9e2c27ae47a5028291))
-* 增加api统计队列名称设置rtsQueueName ([46cedc1](https://github.com/kongnet/skybase/commit/46cedc19dddef9b573f27fabe96c919016184732))
 * 增加api无参数提交测试 ([7ca8020](https://github.com/kongnet/skybase/commit/7ca80203772b356f0005b0dae7f238f7a800715b))
+* 增加api统计队列名称设置rtsQueueName ([46cedc1](https://github.com/kongnet/skybase/commit/46cedc19dddef9b573f27fabe96c919016184732))
 * 增加redirect功能 ([35ead02](https://github.com/kongnet/skybase/commit/35ead02d749b36b6adadfe4ce3e92ac2db1cdfa7))
 * 增加skybase的默认init模板 ([408126e](https://github.com/kongnet/skybase/commit/408126e84c84852faad9d8480f30e8be94372d5b))
 * 增加sokcet.io支持 ([74f0047](https://github.com/kongnet/skybase/commit/74f0047bcc9b2be393d062a0d490b4210e35619e))
-* mysql tree ([acf3e2c](https://github.com/kongnet/skybase/commit/acf3e2cdfe9ff27bb047f36f1362775e64ca35ac))
-* skyjt init 模板中增加 mock 例子 ([c417d8e](https://github.com/kongnet/skybase/commit/c417d8e79ef18aa72db85e8d1ffbfea330ed256d))
+* 增加最近20条错误列表 ([171ab33](https://github.com/kongnet/skybase/commit/171ab330be6ce795e5151d9e2c27ae47a5028291))
+* 更新的统计到mq的方法 ([a0ea9b3](https://github.com/kongnet/skybase/commit/a0ea9b3f8c139281f5c8ae2973cdcd4299165488))
+* 表和字段除id外，没有注解标注 ([45b0b49](https://github.com/kongnet/skybase/commit/45b0b493f8d7754d13b76e11d9c5447ec07c1955))
 
 ### :wrench:
 
-* 更新依赖包版本 ([9f1eefb](https://github.com/kongnet/skybase/commit/9f1eefb40b2433536252428a0eac6f8053b9b1a7))
-* 修改模板中的配置文件 ([c298f97](https://github.com/kongnet/skybase/commit/c298f97124f919612b36d210f1acf43b61d71719))
 * 修改模板中index的数据库加载 ([4727cb6](https://github.com/kongnet/skybase/commit/4727cb60468ee5d773b67654c8d3ffb19d2fb3fa))
+* 修改模板中的配置文件 ([c298f97](https://github.com/kongnet/skybase/commit/c298f97124f919612b36d210f1acf43b61d71719))
+* 更新依赖包版本 ([9f1eefb](https://github.com/kongnet/skybase/commit/9f1eefb40b2433536252428a0eac6f8053b9b1a7))
 
 ### :zap:
 
