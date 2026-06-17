@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "j2sql": "^1.9.21",
-    "amqplib": "^0.5.3",
+    "amqplib": "^0.7.1",
     "ioredis": "^4.9.5",
     "meeko": "^1.7.50"
   }
