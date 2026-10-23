@@ -1,3 +1,12 @@
+## [0.1.112](https://github.com/kongnet/skybase/compare/v0.1.111...v0.1.112) (2026-10-23)
+
+
+### :zap:
+
+* add koa ipaddress support ([f2ad010](https://github.com/kongnet/skybase/commit/f2ad010c99b9c44c4111c0d6e27e61551e39a6c5))
+
+
+
 ## [0.1.111](https://github.com/kongnet/skybase/compare/v0.1.110...v0.1.111) (2026-06-03)
 
 
